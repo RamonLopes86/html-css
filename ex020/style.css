@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+h1{
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    
+
+}
+
+div:hover{
+
+    color: red;
+   
+}
+
+
+div > p {
+
+    display: none;
+    
+    
+    }
+
+div:hover > p {
+
+    display: block;
+    font-size: 3em;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+

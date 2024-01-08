@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagem/montanha.png" type="image/x-icon">
+    <title>Carregando Videos </title>
+</head>
+
+
+<body>
+
+
+
+
+
+    <h1>Carregando Videos </h1>
+    
+    <h2>Inserindo videos hospedados Localmente </h2>
+    
+    <p>Videos hospedados no meu proprio servidor</p>
+
+    <p>A primeira opção é com a tag video e colocar seu video dentro da src"" , veja : </p>
+
+    <video poster="imagem/montanha.png" preload="none"  controls  width="300px" src="midia/video-formatoOGV.ogv"></video>
+
+    <p>se o navegador não reproduzir o video, baixe ele aqui - <strong><a href="midia/video-formatoMP4.mp4" download="video-formatoMP4.mp4">BAIXAR VIDEO</a></strong></p>
+    <hr>
+   
+
+   <p>Existe Tambem  a forma de incluir video com a tag video e entre elas o source. Dessa forma , você pode incluir varios videos e amplicar a reprodução de qualquer navegador que o usário acessar, veja :</p>
+
+   <video controls poster="imagem/montanha.png" preload="metadata" width="300px">
+
+    <source src="midia/video-formatoWEBM.webm" type="video/webm">
+
+    <source src="midia/video-formatoOGV.ogv" type="video/ogg">
+
+    <source src="midia/video-original.mp4" type="video/mp4"> 
+
+    <p>Caso não seja possivel executar o video, baixe ele aqui - <a href="midia/video-formatoMP4.mp4" download="video-formatoMP4.mp4" type="video/mp4">baixar video</a> </p>
+
+   </video>
+
+   <h2>Como utilizar videos do youtube</h2>
+
+   <iframe width="360px" height="200px" src="https://www.youtube.com/embed/69KGlE3r4Ms?si=tc9QotcyTYPis99M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+ 
+    
+
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,30 @@
+@font-face {
+    font-family:"stop";
+    src: url(fontes/stop.ttf);
+    
+    
+    
+}
+
+@font-face {
+    font-family:'jo' ;
+    src: url(fontes/jo.ttf), format('truetype'); /*para ttf coloque no formaT(truetype)*/
+}
+
+body{
+
+    font-family: 'Times New Roman', Times, Helvetica, sans-serif;
+    font-size:16px;
+
+
+}
+
+h1{
+
+    font-family: "jo", Helvetica,serif;
+    font-size: 4em;
+    font-weight:normal;
+    font-style: normal;
+  
+
+}

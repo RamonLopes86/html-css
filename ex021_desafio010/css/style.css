@@ -1,0 +1,294 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family:'ramon';
+    src: url(../fonts/idroid.otf);
+}
+
+
+
+*{
+    margin:0px;
+    
+}
+
+
+
+body{
+
+background-color:#b6dac7ea;
+
+
+
+
+}
+
+header{
+
+    background-image: linear-gradient(to bottom,#389635,#61ad5e);
+    padding-top: 20px;
+    
+    
+    
+    
+}
+
+.cabeca{ /*aqui sao os h1 e h2 do header geral */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:lighter;
+    text-align: center;
+    color: white;
+    
+      
+}
+
+#h2cabeca{
+    font-size:18px;
+    padding-top:20px;
+    max-width: 500px;
+    margin: auto;
+}
+
+#titulo-principal{
+
+    text-shadow: 3px 3px 0px #0d221238;
+}
+
+#navegacao{
+
+   padding-bottom:8px;
+   padding-top:20px;
+
+   
+}
+
+
+
+.a-navegacao{
+    color: #1b491a;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left:10px;
+    margin-left: 5px;
+    text-decoration: none;
+    font-weight: bold;
+        
+}
+
+
+
+.a-navegacao:hover{
+
+    
+    
+    background-color: #00000048;
+    border-radius: 5px;
+    padding: 2px;
+    transition-duration:400ms;
+    margin-bottom: 10px;
+    
+    
+}
+
+main{
+    background-color: white;
+    min-width: 320px;
+    max-width: 1200px;
+    margin: auto;
+    box-shadow:2px 1px 6px rgba(0, 0, 0, 0.233);
+    border-radius: 0px 0px 8pxpx 8px;
+    
+
+         
+}
+
+.main_h1{
+    color: #307c42;
+    font-family: 'ramon', cursive,sans-serif;
+    padding-top: 10px;
+    margin-left:10px;
+
+}
+
+.main_h2{
+
+    color: #307c42;
+    font-family: 'ramon',cursive,sans-serif;
+    background-image:linear-gradient(to right,#abf0bb,white);
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size:20px;
+}
+
+p{
+    
+    text-align: justify;
+    margin:10px;
+    padding: 5px;
+    text-indent: 20px;
+    line-height:1.5;
+    
+}
+
+
+main>.imagem{
+
+    text-align: center;
+   
+    
+   
+   
+}
+
+img{
+    width:100%;
+    
+}
+
+#boneco-preto{
+
+    max-width: 350px;
+    margin: auto;
+}
+
+
+
+main>#video{
+
+background-color: #307c42;
+text-align: center;
+margin: auto;
+padding:20px;
+min-width: 320;
+max-width: 1200px;
+
+
+
+
+}
+
+
+iframe{
+
+    width:100%;
+    border-radius:15px 5px 15px 5px;
+   
+   
+}
+
+
+
+#queraprendermais{
+
+background-color: #defcec;
+margin: 10px;
+
+}
+
+#queraprendermais> h1{
+
+    color: white;
+    background-color: #307c42;
+    border-radius: 5px 5px 0px 0px;
+    padding: 5px;
+    font-size: 18px;
+    box-shadow: 1px 3px 2px  #0c1f102f;
+}
+
+abbr{
+
+    text-decoration: none;
+}
+
+section>ul{
+
+    columns:2;
+    list-style-position:inside;
+    list-style-type: '\2705\00A0'; /*00A0 é o espaço sem quebra do emogi com a lista*/ 
+    
+}
+
+
+#rodape{
+
+min-width: 320px;
+max-width: 1200px;
+text-align: center;
+margin: auto;
+font-size: 12px;
+background-color: #1a4223;
+color: white;
+min-height:30px;
+
+
+
+}
+
+#rodape p {
+    display: inline;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+   
+   
+}
+
+#rodape{
+
+    padding:0px;
+    padding-bottom:1px;
+    padding-top: 1px;
+    
+    
+}
+
+#mail-rodape{
+
+    color: white;
+    text-decoration: none;
+
+}
+
+#mail-rodape:hover{
+
+    text-decoration: underline;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.link-externo{
+
+   text-decoration: none;
+   color:#307c42;
+   font-weight: bold;
+  
+   
+}
+
+.link-externo::after{
+
+    content:'\1F517';
+}
+
+.link-externo:hover{
+
+    text-decoration: underline;
+    background-color: #307c4231;
+    border-radius: 5px;
+    padding: 2px;
+    transition: 250ms;
+}
+
+.marcar{
+
+    color:#307c42;
+    font-weight: bold;
+    background-color: #61ad5e41;
+    border-radius: 5px 0px 5px 0px;
+    padding: 2px;
+
+}
+
+
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <title>Midias em HTML 5</title>
+</head>
+
+
+<body>
+
+<ins>
+    <h1>Imagem Dinâmica  </h1>
+</ins>
+
+<p>Tente abrir esse site em varios dispositivos  diferentes ou simplismente aumente e diminua o tamanho do seu navegador</p>
+
+<picture>
+
+
+<source media="(max-width: 785px )" srcset="imagens/P.png" type="image/png">
+<source media="(max-width:1090px )" srcset="imagens/M.png" type="image/png">
+<img src="imagens/G.png" alt="imagem grande">
+
+</picture>
+
+<h2>Colocando audio na sua página</h2>
+<h3>Vamos aprender a colocar audio na sua página</h3>
+<p>Primeira forma é com a tag audio , veja :</p>
+
+<audio src="midia/grav-audio.m4a" controls></audio>
+
+
+<p>Segunda forma de colocar audio, tambem com a tag audio, mas utilizando source dentro da tag , veja :</p>
+
+
+<audio preload="auto" autoplay controls >
+
+
+<source src="midia/grav-audio.ogg" type="audio/ogg"> <!--no source, primeiro ele tenta carregar esse, caso não consiga;-->
+
+<source src="midia/grav-audio.m4a" type="audio/mp4"><!--ele vem para o source de baixo-->
+
+</audio>
+
+
+    
+</body>
+
+</html>

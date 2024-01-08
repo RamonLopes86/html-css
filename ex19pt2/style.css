@@ -1,0 +1,88 @@
+@charset "UTF-8";
+@font-face {
+    font-family:"avalon" ;
+    src: url(fonts/Avalon.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "avalon dif";
+    src: url(fonts/AvalonSquare.ttf) format('truetype');
+}
+
+
+
+/*
+em html : id 
+em CSS : #
+
+em html é : class
+em CSS é :  . (sinal de ponto)
+*/
+
+body{
+
+    background-color: #ffefdb;
+    font-family: Arial,'Times New Roman', Times, serif;
+    font-size:16px;
+    font-weight:normal;
+    font-style: normal;
+    
+    
+
+}
+
+p{
+    
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:18px;
+}
+
+h1#principal{
+
+    text-align: center;
+    background-color: #A68C6D;
+    color: white;
+    font-weight:lighter;
+    font-size:3.3em;
+}
+
+
+
+.basico{
+
+font-size: 2em;
+text-align: center;
+color:#ec9b7eef;
+font-family:avalon;
+text-shadow: 2px 3px 4px #31201a6b;
+
+
+}
+
+.segundotitulo{
+
+text-align: center;
+color:#D97B59;
+font-weight: bold;
+
+
+}
+
+
+.intermediario{
+
+color:#592C28;
+font-weight:lighter;
+font-family: 'Bebas Neue',sans-serif;
+font-size: 2em;
+text-shadow: 3px 2px 4px #2e17154f ;
+
+}
+
+.avancado{
+
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    color: #f56600e7;
+}
