@@ -224,29 +224,37 @@ min-height:30px;
 }
 
 #rodape p {
-    display: inline;
+
+    
     text-align: center;
     font-size: 16px;
     line-height: 30px;
+    margin: -7px;
    
    
 }
 
 #rodape{
 
-    padding:0px;
-    padding-bottom:1px;
-    padding-top: 1px;
     
-    
+    padding-bottom:10px;
+     
 }
+
+
 
 #mail-rodape{
-
+    
     color: white;
     text-decoration: none;
+    border-radius: 8px;
+   
+    
+    
 
 }
+
+
 
 #mail-rodape:hover{
 
