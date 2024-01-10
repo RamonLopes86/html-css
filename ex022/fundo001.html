@@ -6,27 +6,61 @@
     <title>Document</title>
 
 <style>
-    .quadrado{
-        border: 1px solid black;
+
+    
+    div.quadrado{
+
+        display:inline-block;
+        border-style: solid;
+        border-width: 1px;
+        color:black;
         width: 300px;
         height: 300px;
+        background-color: lightgrey;
+        border-radius:10px;
+
+       
 
     }
+
+    
+    #q1{
+        background-color: aqua; /*imagem solida*/
+    }
+
+    #q2{
+        background-image: linear-gradient(to bottom,yellow,red); /*forma degradê*/
+    }
+
+    #q3{
+
+        background-image: url(image/pattern002.png); /*forma de imagem de fundo*/
+    }
+  
+   
+
+
 </style>
 
 </head>
 
 <body>
-    
-    <di class="quadrado">
+     <div class="quadrado" id="q1">
 
     </div>
-    <di class="quadrado" >
+
+    <div class="quadrado" id="q2">
+
 
     </div>
-    <di class="quadrado">
+
+    <div class="quadrado" id="q3">
+
 
     </div>
+  
+
+  
 
 </body>
 </html>
