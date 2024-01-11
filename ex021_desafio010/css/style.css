@@ -21,6 +21,7 @@ background-color:#b6dac7ea;
 
 
 
+
 }
 
 header{
@@ -238,6 +239,9 @@ min-height:30px;
 
     
     padding-bottom:10px;
+    max-width: 1300px;
+    min-width: 320px;
+    margin: auto;
     
      
 }
