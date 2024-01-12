@@ -42,6 +42,7 @@ article{
     max-width: 600px;
     
     
+    
 }
 
 article  p{
@@ -65,7 +66,32 @@ article  p{
     background-size:cover;
     background-attachment:fixed;
     color: white;
-    width: 100%;
+    
     
    
 }
+
+
+#article-ft{
+
+padding: 20px;
+margin: 0px;
+
+    
+}
+
+#p-dentro{
+    background-color: rgba(0, 0, 0, 0.493);
+    padding:10px;
+    margin-left: 60px;
+    margin-top: 10px;
+    max-width: 500px;
+    text-align: justify;
+    margin: auto;
+    
+}
+
+
+
+
+
