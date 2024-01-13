@@ -55,7 +55,8 @@ section{
 .com-imagem{
 
     background-color: rgb(143, 143, 137);
-
+    box-shadow: 18px 18px 10px rgba(0, 0, 0, 0.233);
+    
 }
 
 #flor{
@@ -96,6 +97,26 @@ section{
 
 }
 
+.agradecimento p {
+
+    font-size: 20px;
+    line-height: 30px;
+
+}
+
+img{
+   
+    
+    position: relative;
+    top: 12px;
+    left:10px;
+    width: 40px;
+    margin: 0px auto;
+   
+    
+
+}
+
 footer{
 
     background-color: black;
@@ -119,7 +140,7 @@ footer span{
 
 
 
-a{
+.ancora{
     text-decoration: none;
     color: white;
 }
@@ -129,3 +150,17 @@ a:hover{
     text-decoration: underline;
 }
 
+#yt{
+
+    color: black;
+    text-decoration: none;
+}
+
+#nome-yt{
+    padding: 10px;
+}
+
+#nome-yt:hover{
+
+    text-decoration: underline;
+}
