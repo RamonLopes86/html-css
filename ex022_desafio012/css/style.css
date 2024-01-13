@@ -66,6 +66,7 @@ article  p{
     background-size:cover;
     background-attachment:fixed;
     color: white;
+    height: 100vh;
     
     
    
@@ -88,6 +89,7 @@ margin: 0px;
     max-width: 500px;
     text-align: justify;
     margin: auto;
+    
     
 }
 
