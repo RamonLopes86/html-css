@@ -3,81 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USO DE TABELAS GRANDES</title>
+    <meta name="description" content="Trabalhando com Tabelas">
+    <title>Document</title>
 
-    <style>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                
+            }
 
-        body{
-            font-family: Arial, Helvetica, sans-serif;
+        header{
+            padding: 10px;
         }
-       
+
         table{
 
-            width: 400px;
+            width: 600px;
             border-collapse: collapse;
+            margin-left: 10px;
+            
+            
         }
-           
 
-        td,th{
+        thead,tfoot{
 
-            border: 1px;
+            background-color: rgb(128, 128, 128);
+            color: white;
+            font-size: 18px;
+            font-family:cursive,sans-serif;
+          
+        }
+
+        th,td{
+            border:2px;
             border-style: solid;
-            border-color: black;
+            border-color:black ;
             padding: 2px;
-           
         }
 
-       thead{
-        background-color: gray;
-        color: white;
-        font-size: 20px;
-       }
+        .num{
+
+            text-align: right;
+            width: 100px;
+            
+        }
+        .nome{
+            text-align: left;
+        }
+
+        caption{
+            
+           text-decoration: underline;
+            padding: 15px;
+            font-size: 22px;
+            font-family: cursive;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+    
+        tfoot .num{
+
+            font-weight: bold;
+        }
+
+     
+        tbody > tr:nth-child(even){
+
+            background-color: bisque;
+        }
+
+        tbody>tr:nth-child(odd){
+
+            background-color: aqua;
+        }
+
+        /*colocar o titulo fixado*/
+        thead>tr>th{
+
+            position:sticky;
+            top:-1px;
+            background-color: gray;
+        }
 
 
-        
-
-    </style>
+        </style>
 </head>
 <body>
-    <h1>Uso de Tabelas Grandes</h1>
-<table>
 
-    <thead>
-        <tr>
-            <th>Unidade Federativa</th>
-            <th>População</th>
-            
+    <header>
+        <h1>Uso de Tabelas Grandes</h1>
 
-        </tr>
+    </header>
 
-    </thead>
+    <main>
+        <section>
 
-    <tbody>
+           
 
-        <tr>
-            <td>
-                São Paulo
-            </td>
+            <table>
+                <caption>Dados da população Brasil</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Estado</th>
+                        <th scope="col">População</th>
+                    </tr>
 
-            <td>44.411238</td>
-        </tr>
-        <tr>
-            <td>Minas Gerais </td>
-            <td>20.538718</td>
-        </tr>
+                </thead>
+                <tbody>
+
+                       <tr>
+                        <td class="nome">Sao Paulo</td>
+                        <td class="num">4758458</td>
+                       </tr>
+                       <tr>
+                        <td class="nome">Salvador</td>
+                        <td class="num">45825425</td>
+                       </tr>
+                       <tr>
+                        <td class="nome">Rio de Janeiro</td>
+                        <td class="num">856458255</td>
+                       </tr>
+                       <tr>
+                        <td class="nome">Minas Gerais</td>
+                        <td class="num">21254856</td>
+                       </tr>
+                       <tr>
+                        <td class="nome">Goiais</td>
+                        <td class="num">785854785</td>
+                       </tr>
+
+                       <tr>
+                        <td class="nome">Mato Grosso</td>
+                        <td class="num">5878545265</td>
+                       </tr>
+                       <tr>
+                        <td class="nome">Ceara</td>
+                        <td class="num">488552895</td>
+                       </tr>
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row">Total</th>
+                        <td class="num">0000</td>
+                    </tr>
 
 
-    </tbody>
-
-    <tfoot>
+                </tfoot>
 
 
-    </tfoot>
+            </table>
 
-</table>
+        </section>
+
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellat? Libero mollitia nihil distinctio neque possimus saepe et quas fugit, dolorum asperiores doloremque nulla assumenda porro eveniet hic excepturi! Consectetur? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis provident quae nobis iure voluptatibus consequuntur ad atque cupiditate voluptatum sit minus optio odit, velit esse cumque, pariatur quia vel? Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae iure earum fuga accusamus dolorem asperiores officiis tenetur reiciendis reprehenderit dicta nam quidem, nulla modi, laudantium ratione nemo. Odit, tempore eum!</p>
+
+    </main>
+
+    <footer>
+
+
+    </footer>
+
 
     
 </body>
-
-
 </html>
