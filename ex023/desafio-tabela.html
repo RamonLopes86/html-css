@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAFIO TABELA 1</title>
+
+    <style>
+
+        #tab1{
+            border-collapse:collapse ;
+            margin: 50px;
+        }
+        td{
+            border: 1px solid black;
+            
+            text-align: center;
+            padding: 10px;
+        }
+
+        caption{
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        /*---------------------------------------*/
+        #tab2{
+            margin: 40px;
+            
+        }
+
+      #a,#b,#c,.meio,#n{
+
+        font-weight: bold;
+      }
+        
+        #b,#c{
+
+            width: 25px;
+            
+        }
+
+        .meio{
+
+            width: 20px;
+            
+        }
+
+
+    </style>
+</head>
+
+
+<body>
+
+
+    
+
+    <table id="tab1">
+    
+    
+            <thead>
+                <!--Não tem Cabeça essa Tabela-->
+    
+            </thead>
+            <tbody>
+                <caption>TABELA 1 DO DESAFIO </caption>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td rowspan="2">3</td>
+                    <td>4</td>
+    
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+    
+    
+                </tr>
+                <tr>
+                    <td colspan="3">8</td>
+                    <td>9</td>
+    
+    
+                </tr>
+                <tr>
+                    <td rowspan="2">10</td>
+                    <td colspan="2">11</td>
+                    <td>12</td>
+    
+    
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+    
+    
+    
+    
+    </table>
+
+            
+    <table id="tab2">        
+            <thead>
+                <!--não tem cabeça essa tabela -->
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td id="a" colspan="4">A</td>
+                    <td id="b" rowspan="4">B</td>
+                    
+                    
+                </tr>
+                <tr>
+                    <td id="c" rowspan="4">C</td>
+                    <td class="meio">D</td>
+                    <td class="meio">E</td>
+                    <td class="meio">F</td>
+                    
+                </tr>
+                <tr>
+                    <td class="meio">G</td>
+                    <td class="meio">H</td>
+                    <td class="meio">I</td>
+                    
+                </tr>
+                <tr>
+                    <td class="meio">J</td>
+                    <td class="meio">L</td>
+                    <td class="meio">M</td>
+                   
+                </tr>
+                <tr>
+                    <td id="n" colspan="4">N</td>
+                    
+                </tr>
+
+            </tbody>
+            <tfoot>
+                <!--sem rodapé-->
+            </tfoot>
+        
+
+    
+
+
+    </table>
+
+    
+</body>
+</html>
