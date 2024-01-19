@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tabela de Dados">
+    <title>Tabela</title>
+
+    <style>
+
+        table{
+
+            margin: 20px;
+        }
+
+        td,th{
+
+            border: 1px solid black;
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            
+        }
+
+     th{
+        background-color: rgb(128, 128, 128);
+        color: white;
+     }
+
+     caption{
+        font-size: 22px;
+        padding-bottom:10px ;
+     }
+
+    </style>
+</head>
+<body>
+
+    <table>
+        <caption>Filmes Favoritos</caption>
+        <thead>
+
+            <tr>
+                <th scope="col">Grupos</th>
+                <th scope="col">Nomes </th>
+                <th scope="colgroup" colspan="3">Filmes</th>
+                
+            </tr>
+
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <th scope="rowgroup"  rowspan="3">Mulheres</th>
+                <td>Ana Maria</td>
+                <td>Alien</td>
+                <td>Rambo</td>
+                <td>Vingadores</td>
+
+            </tr>
+            <tr>
+                <td>Beatriz </td>
+                <td>Batman</td>
+                <td>Hulk</td>
+                <td>K9</td>
+                
+
+            </tr>
+            <tr>
+                
+                <td>Claudia Melo</td>
+                <td>Matrix</td>
+                <td>Big Hero</td>
+                <td>corrida mortal</td>
+
+            </tr>
+
+            <tr>
+                <th scope="rowgroup" rowspan="3">Homens</th>
+                <td>Bruno</td>
+                <td>intocaveis</td>
+                <td>Amnésia </td>
+                <td>Seven</td>
+
+            </tr>
+
+            <tr>
+                
+                <td>Daniel</td>
+                <td>Wall-E</td>
+                <td>OldBoy </td>
+                <td>Procurado</td>
+
+            </tr>
+
+            <tr>
+                
+                <td>Fabiano</td>
+                <td>Star Wars</td>
+                <td>Taxi </td>
+                <td>MegaDriver</td>
+
+            </tr>
+
+        </tbody>
+
+        
+
+
+
+    </table>
+
+    
+</body>
+</html>
