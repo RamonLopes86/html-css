@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+
+   
+</head>
+<body>
+
+    <div class="container-login" >
+
+        <form method="post" action="arquivo.php" autocomplete="off"> 
+
+            <div class="usuario">
+
+               <label for="iuser">User :</label>
+
+               <input required  type="text" name="user" id="iuser">
+
+            </div>
+
+            <div class="senha">
+
+                <label for="idsenha">Password :</label>
+
+                <input required maxlength="5" minlength="2"  type="password" name="senha" id="idsenha">
+
+            </div>
+
+            <input  type="submit" value="Entrar">
+
+            <input type="reset" value="Limpar">
+
+        </form>
+
+    </div>
+
+    
+</body>
+</html>
