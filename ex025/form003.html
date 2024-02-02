@@ -4,59 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulários</title>
+
+
     
 </head>
 <body>
 
-    <div class="container-login" >
 
-     <form action="cadastro.php" autocomplete="on" method="post">
 
-        <p>
-
-            <label for="iname">Nome:</label>
-
-            <input required value="Ramon Lopes" autocomplete="name" type="text" name="name" id="iname" maxlength="8" minlength="5" size="20">
-
-    
-        </p>
-
-        <p>
-
-            <label for="imedia">Média :</label>
-            <input placeholder=" 0 a 10" required  max="10" min="0" step="0.1" type="number" name="media" id="imedia">
-
-        </p>
-
-        <p>
-            <label for="imes">Mês : </label>
-            <input  type="month" name="mes" id="imes">
-        </p>
-
-        <p>
-            <label for="idate">Data :</label>
-            <input  type="date" name="date" id="idate">
-
-        </p>
-
-        <p>
-
-            <label for="ihora">Horário</label>
-            <input type="time" name="hora" id="ihora">
-        </p>
+    <main>
         
-       <div class="botoes">
-
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
-
-       </div>
-
-
-     </form>
-
-    </div>
-
-    
+            <div class="container-login" >
+        
+            <form action="cadastro.php" autocomplete="on" method="post">
+        
+                <p>
+        
+                    <label for="iname">Nome:</label>
+        
+                    <input required value="Ramon Lopes" autocomplete="name" type="text" name="name" id="iname" maxlength="8" minlength="5" size="20">
+        
+        
+                </p>
+        
+                <p>
+        
+                    <label for="imedia">Média :</label>
+                    <input placeholder=" 0 a 10" required  max="10" min="0" step="0.1" type="number" name="media" id="imedia">
+        
+                </p>
+        
+                <p>
+                    <label for="imes">Mês : </label>
+                    <input  type="month" name="mes" id="imes">
+                </p>
+        
+                <p>
+                    <label for="idate">Data :</label>
+                    <input  type="date" name="date" id="idate">
+        
+                </p>
+        
+                <p>
+        
+                    <label for="ihora">Horário</label>
+                    <input type="time" name="hora" id="ihora">
+                </p>
+        
+            <div class="botoes">
+        
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+        
+            </div>
+        
+        
+            </form>
+        
+            </div>
+        
+        
+    </main>
 </body>
 </html>
