@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de formulários</title>
+</head>
+<body>
+
+     <!--cadas.php so coloquei para indicar algo no action , mas não existe e nem esta funcional-->
+
+    <form action="cadastro.php" method="get" autocomplete="on">
+
+        <fieldset>
+
+            <legend>Dados Pessoais</legend>
+            
+            <p>
+                <label for="idname">Nome : </label>
+                <input type="text" name="name" id="idname">
+            </p>
+            <p>
+            
+                <label for="idmail">
+                    E-mail :
+                    <input type="email" name="mail" id="idmail" required>
+                </label>
+            </p>
+            <p>
+                <label for="idtel">
+                    Telefone:
+                    <input type="tel" name="tel" id="idtel" required>
+            
+                </label>
+            </p>
+            
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+
+    </form>
+
+    <!--estudar sobre regEx ( expresões regulares) não tem no material ( estudar por fora.)-->
+    
+</body>
+</html>
