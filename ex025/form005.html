@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exemplo de formulário</title>
+
+
+    <style>
+
+        div{
+
+            padding-bottom: 10px;
+        }
+
+        fieldset{
+            max-width: 400px;
+            padding: 20px;
+            margin:40px;
+        }
+
+        fieldset legend{
+
+            font-weight: bold;
+            color: blue;
+            font-size: 20px;
+            font-family: cursive,sans-serif;
+        }
+
+        .botoes{
+
+            margin-left: 40px;
+        }
+
+        
+    
+    </style>
+</head>
+<body>
+
+    <fieldset>
+
+        <legend>Gênero</legend>
+
+        <input type="radio" name="sx" id="idsxmas">
+        <label for="idsxmas">Masculino</label>
+
+        <input type="radio" name="sx" id="idsxfem">
+        <label for="idsxfem">Femenino</label>
+
+
+    </fieldset>
+
+
+
+
+    <fieldset>
+        <legend>Marque seus gostos</legend>
+
+        <div class="box">
+            
+            
+            <input type="checkbox" name="futebol" id="idfutebol" checked><label for="idfutebol">Futebol</label>
+        
+        </div>
+
+        <div class="box">
+
+            <input type="checkbox" name="volei" id="idvolei"><label for="idvolei">Volei</label>
+        
+        </div>
+
+        <div class="box">
+
+            <input type="checkbox" name="game" id="idgame"><label for="idgame">Game</label>
+        
+        </div>
+
+
+
+    </fieldset>
+
+
+
+
+<input class="botoes" type="submit" value="ENVIAR">
+<input class="botoes" type="reset" value="LIMPAR">
+
+
+
+    
+</body>
+</html>
