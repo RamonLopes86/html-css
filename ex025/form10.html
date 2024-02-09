@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+
+    <h1>Formulário</h1>
+
+    <form action="">
+
+    <p>
+        <label for="iano">Ano de Nascimento :</label>
+        <input type="number" name="ano" id="iano" min="1000" max="2024" required oninput="calc()">
+    </p>
+    
+  
+
+    <p>
+
+        <span>Sua idade é  : </span>
+        <output id="res">
+           
+
+        </output>
+
+    </p>
+
+    <p>
+        
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </p>
+
+
+    </form>
+
+    <script>
+
+        function calc(){
+
+           let atual = new Date().getFullYear()
+
+           res.innerHTML= Number(atual) - Number(iano.value)
+
+        }
+
+
+        
+    </script>
+
+    
+    
+</body>
+</html>

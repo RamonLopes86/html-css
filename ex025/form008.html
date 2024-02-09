@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Formulário com linguagem de programação JS</h2>
+
+
+    <form action="">
+        
+        <p>
+            <label for="idnum">Digite um Número :</label>
+            <input type="number" name="num" id="idnum" required min="1" max="10" oninput="isoma.innerHTML=Number(idnum.value) + Number(idnum2.value)">
+            
+        </p>
+
+        <p>
+            <label for="idnum2">Digite outro Número :</label>
+            <input type="number" name="num2" id="idnum2" required min="1" max="10" oninput="isoma.innerHTML=Number(idnum.value) + Number(idnum2.value)">
+        </p>
+
+        <p>
+            <label for="isoma">Soma :</label>
+            
+            <output name="soma" id="isoma">
+
+            </output>
+        </p>
+
+        <p>
+            <!-- botoes -->
+            <input type="submit" value="Calcular">
+            <input type="reset" value="Limpar">
+        </p>
+
+    </form>
+
+
+        
+    
+</body>
+</html>
