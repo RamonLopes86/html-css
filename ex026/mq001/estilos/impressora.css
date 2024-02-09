@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/* estilo para impressora */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+
+    width: 100%;
+
+}
+
+menu{
+    display: none;
+}
+
+header h1 {
+
+    margin: 20px;
+}
+
+p{
+
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace,sans-serif;
+    padding-top: 15px;
+    line-height: 25px;
+}
+
+main::after{
+
+    content: "desn. por Ramon Lopes";
+}
+
