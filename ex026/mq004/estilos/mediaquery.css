@@ -7,12 +7,73 @@
     main{
 
         #cel{display: none};
-        #tablet{display: block};
+        #tablet{display: inline};
         #impressora{display: none};
         #pc{display: none};
         #tv{display: none};   
         
         
     }
+
+    body{
+
+        background-image: url(../image/back-tablet.jpg);
+        background-position:center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
    
+}
+
+
+@media screen and (min-width:769px) and (max-width:1024px){
+
+    main{
+
+        #cel{display: none};
+        #tablet{display: none};
+        #impressora{display: none};
+        #pc{display: inline};
+        #tv{display: none};   
+        
+        
+    }
+
+    body{
+
+        background-image: url(../image/back-pc.jpg);
+        background-position:center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+
+
+}
+
+@media screen and (min-width: 1025px) {
+
+    main{
+
+        #cel{display: none};
+        #tablet{display: none};
+        #impressora{display: none};
+        #pc{display: none};
+        #tv{display: inline};   
+        
+        
+    }
+
+    body{
+
+        background-image: url(../image/back-print.jpg);
+        background-position:center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    
 }

@@ -19,7 +19,7 @@ Telas extragrandes, TV – 1201px e muito mais.
    
 }
 
-#cel{display: block;}
+#cel{display: inline;}
 #tablet{display: none;}
 #impressora{display: none;}
 #pc{display: none;}
