@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/* aparelho em pé ( retrato) */
+
+
+body{
+
+    background-image: url(../image/cev-portrait.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+   
+}

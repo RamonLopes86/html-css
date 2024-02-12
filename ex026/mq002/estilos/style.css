@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+/* media all */
+
+
+
+*{
+
+    margin: 0;
+    padding: 0;
+ 
+}
+
+body{
+
+    height: 100vh;
+}
+
+body , html {
+
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+
+}
+
+h1{
+    padding: 10px;
+    
+}
+
+
+

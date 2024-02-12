@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/*  aparelho em paisagem */
+
+
+
+
+body{
+
+  background-image: url(../image/cev-landscape.jpg);
+  background-repeat: no-repeat;
+  background-position: left bottom ;
+
+  
+    
+}
