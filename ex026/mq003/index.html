@@ -4,9 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>media queries</title>
-    <link rel="stylesheet" href="estilos/style.css" media="all">
-    <link rel="stylesheet" href="estilos/retrato.css" media="screen and (orientation: portrait)">
-    <link rel="stylesheet" href="estilos/paisagem.css" media="screen and (orientation: landscape)">
+    <style>
+        /* declarações gerais */
+
+            *{
+
+            margin: 0;
+            padding: 0;
+
+            }
+
+            body{
+
+            height: 100vh;
+            }
+
+            body , html {
+
+            width: 100vw;
+            height: 100vh;
+            background-size: contain;
+
+            }
+
+            h1{
+            padding:10px
+
+            }
+
+
+
+        /* declarações retrato */
+
+            @media screen and (orientation:portrait) {
+
+                body{
+
+                background-image: url(../mq003/imagens/cev-portrait.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: left bottom;
+
+                }
+
+                
+            }
+       
+        /* declarações paisagem  */
+
+            @media screen and (orientation: landscape) {
+
+                body{
+
+                background-image: url(../mq003/imagens/cev-landscape.jpg);
+                background-repeat: no-repeat;
+                background-position: left bottom ;
+
+
+
+                }
+
+                
+            }
+
+       
+
+    </style>
 </head>
 <body>
 
