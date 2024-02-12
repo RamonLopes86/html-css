@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+
+/* 
+Dispositivos móveis – 320px – 480px.
+iPads, tablets – 481px – 768px.
+Telas pequenas, laptops – 769px – 1024px.
+Desktops, telas grandes – 1025px – 1200px.
+Telas extragrandes, TV – 1201px e muito mais. 
+*/
+
+/* em configurações gerais faremos para phone paseado no mobilie frist (pesquisar) */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+   
+}
+
+#cel{display: block;}
+#tablet{display: none;}
+#impressora{display: none;}
+#pc{display: none;}
+#tv{display: none;}
+
+
+body{
+  
+    background-image: url(../image/back-phone.jpg);
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+    
+    
+    
+
+}
+
+main{
+    width: calc(100% - 40px);
+    min-width: 320px;
+    max-width:480px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.692);
+    text-align: center;
+    border-radius: 5px;
+    
+}
+
+
+
+
+    
+
+
+
