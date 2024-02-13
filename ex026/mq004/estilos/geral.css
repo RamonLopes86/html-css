@@ -19,7 +19,7 @@ Telas extragrandes, TV – 1201px e muito mais.
    
 }
 
-#cel{display: inline;}
+#cel{display: none;}
 #tablet{display: none;}
 #impressora{display: none;}
 #pc{display: none;}
@@ -42,8 +42,8 @@ body{
 
 main{
     width: calc(100% - 40px);
-    min-width: 320px;
-    max-width:480px;
+    
+    max-width:568px;
     margin: 20px auto;
     background-color: rgba(255, 255, 255, 0.692);
     text-align: center;
