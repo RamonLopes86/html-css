@@ -39,7 +39,7 @@ header span{
 
 nav{
     text-align: center;
-    display: block;
+    display: none;
 }
 
 nav > span > a {
@@ -54,6 +54,24 @@ nav > span:hover {
     transition: 200ms;
 
 }
+
+#icone-burger{
+
+    color:white;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+#icone-burger:hover{
+
+    background-color: white;
+    color: black;
+}
+
+
+
 
 main{
 max-width: 950px;
