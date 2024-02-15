@@ -18,3 +18,17 @@ if(menu.style.display == "block"){
     
 }
 
+
+function tamanho(){
+
+if(window.innerWidth >= 780){
+
+    menu.style.display="block"
+}else{
+
+    menu.style.display="none"
+}    
+
+
+}
+
