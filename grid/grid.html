@@ -14,38 +14,62 @@
 
         div{
 
-            width:200px;
-            height: 200px;
+            
+            
             color: white;
             font-size: 40px;
-            text-align: center;
+           
+           
             
             
+        }
+
+        
+
+        section{
+            max-width: 900px;
+            margin: 0 auto;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
         }
 
         main{
 
-            max-width: 1700px;
-            height: 700px;
+            
+            width: 80%;
+            height: 500px;
             background-color: rgba(128, 128, 128, 0.541);
             margin: 0px auto;
+            padding: 20px;
             display: grid;
-            grid-template: auto auto auto /auto auto;
-            padding: 10px;
-            margin: 20px;
-            /* gap: 10px; */
-            row-gap: 10px;
-            column-gap: 15px;
-            justify-items:center;
-            align-items: flex-start;
-
-            align-content: flex-start;
-
-            justify-content: center ;
+            grid-template: auto auto auto auto / auto auto auto auto;
+            gap: 10px;
+            
+            
+            
+           
             
 
-
+            
+            
+            
+            
+            /* grid-template-areas: "a1 a1 a2 a2 "
+                                "a1  a1 a2 a2" 
+                                "a3 a3 a4 a4"
+                                "a3 a3 a4 a4" 
+                                "a5 a5 a6 a6"   
+                                    */
+                               
+                                    
+        
+            
         }
+        
+       
 
         #bx1{
 
@@ -71,18 +95,79 @@
             background-color: aqua;
         }
 
+        #bx6{
+
+        background-color: rgb(36, 162, 235);
+        }
+
+
+
+        .item1{
+
+            /* grid-area: a1; */
+            grid-column-start: 1 ; /*onde começa a coluna*/
+            grid-column-end: 5; /*onde termina a coluna*/
+        }
+
+        .item2{
+
+            /* grid-area: a2; */
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+        }
+
+        .item3{
+            /* grid-area: a3; */
+
+            grid-column-start: 3;
+           grid-column-end: 5;
+           /* grid-row-start: 2;
+           grid-row-end: 4; */
+            
+        }
+
+        .item4{
+
+            /* grid-area: a4; */
+            
+        }
+
+        .item5{
+
+            /* grid-area: a5; */
+            grid-column-start: span 3 ;
+            /* grid-column-end: 5; */
+            
+        }
+
+        .item6{
+
+            /* grid-area: a6; */
+            grid-column-start: 1 ;
+            grid-column-end: 5;
+            
+        }
+
+       
+
     </style>
 </head>
 <body>
 
-
-    <main>
-        <div id="bx1">1</div>
-        <div id="bx2">2</div>
-        <div id="bx3">3</div>
-        <div id="bx4">4</div>
-        <!-- <div id="bx5">5</div> -->
-    </main>
+<section>
+    
+        <main>
+    
+            <div class="item1" id="bx1">1</div>
+            <div class="item2" id="bx2">2</div>
+            <div class="item3" id="bx3">3</div>
+            <div class="item4" id="bx4">4</div>
+            <div class="item5" id="bx5">5</div>
+            <div class="item6" id="bx6">6</div>
+    
+        </main>
+</section>
 
     
 </body>
