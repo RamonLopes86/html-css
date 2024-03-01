@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        p::first-line{
+
+            color: red; 
+        }
+
+        p::first-letter{
+
+            font-size: 40px;
+            color: blue;
+        }
+
+       
+        
+        
+
+        ul>li::after{
+
+            content: " " ;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            background-image: url(image/esse.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            
+
+        }
+
+        li{
+            
+          list-style-type: none;  
+          
+           
+        }
+
+        #novo::selection{
+
+            background-color: gray;
+            color: white;
+        }
+
+      
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Titulo</h1>
+
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam similique modi blanditiis atque tenetur eos, quo dolores illum! Quos magni repellat numquam sit ad fugit repudiandae quod ratione distinctio consectetur!
+    </p>
+
+    <ul>
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+    </ul>
+
+    <p id="novo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, cum facilis tempora nostrum molestiae quas cupiditate iure praesentium officiis ipsam pariatur eligendi dolorem, facere veritatis, maxime autem accusantium nemo maiores.
+    </p>
+
+    
+    
+</body>
+</html>
