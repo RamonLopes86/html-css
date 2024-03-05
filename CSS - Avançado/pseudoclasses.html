@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo classes</title>
+
+    <style>
+        #idtexto:focus {
+
+            color: red;
+
+
+        }
+
+        li:first-child {
+            /*vai estilizar o primeiro item da lista, caso tenha uma tag no topo da lista ele nao vai estilizar o primeiro filho li*/
+
+            color: green;
+
+
+        }
+
+        li:first-of-type {
+            /*so vai estilizar o primeiro item filho do elemento pai da lista ul ignorando qualquer tag que possa ter dentro da lista.*/
+
+            color: red;
+        }
+
+        li:nth-child(2) {
+            /*aqui ele vai pegar apenas o elemento filho na segunda posição para estilizar , mas se tiver qualquer elemento quie nao seja filho da lista no topo dessa lista , essa estilização nao sera feita.*/
+
+            color: gray;
+        }
+
+        li:nth-of-type(2) {
+            /*seleciona dentro dos parenteses o item filho que deseja estilizar e vai ignorar qualquer elemento que esteja no topo que nao seja filho da lista*/
+
+            color: red;
+            background-color: black;
+            width: 100px;
+            padding: 10px;
+            font-size: 22px;
+        }
+
+        /*importante */
+
+        li:nth-child(2n) {
+            /*aqui vai aplocar para os elementos divisiveis por 2*/
+
+            background-color: blueviolet;
+        }
+
+        li:nth-of-type(2n) {
+
+            color: yellow;
+        }
+
+        /*podemos utilizar dentro dos parenteses o odd (impar) e o even ( par)*/
+
+        li:nth-of-type(3n-2) { /*podemos tambem passar parametro dessa forma dentro do parenteses que diz que ele quer de tres em tres menos 2 , e assim como voce preferir*/
+
+            color: yellow;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <input type="text" name="texto" id="idtexto" autocomplete="off">
+    <input type="text" name="texto2" id="idtexto2" autocomplete="off">
+
+    <ul>
+
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+        <li>item5</li>
+    </ul>
+
+    <ul>
+        <h1>Lista</h1>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+        <li>item5</li>
+    </ul>
+
+    <ul>
+        <h1>Lista</h1>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+        <li>item5</li>
+    </ul>
+
+
+</body>
+
+</html>
