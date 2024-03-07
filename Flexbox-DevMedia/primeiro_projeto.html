@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEXBOX - PRIMEIRO PROJETO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+
+            --fontRamon: poppins;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+
+
+        }
+
+        body {
+
+            background-color: black;
+            
+
+            
+           
+
+
+        }
+
+
+        img {
+
+            width: 100%;
+        }
+
+
+
+
+        .pai {
+
+            max-width: 1024px;
+            margin: 10px auto;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 30px 0px;
+            gap: 5px;
+
+          
+        
+
+        }
+
+        .pai>.card {
+
+            width: 280px;
+            background-color: #2F3237;
+            height: 350px;
+            border-radius: 5px;
+            overflow: hidden;
+
+
+        }
+
+        .pai>.card>.conteudo {
+
+
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            justify-content: space-between;
+        }
+
+
+
+        .pai>.card>.conteudo>h1 {
+
+            font-size: 15px;
+            color: white;
+            font-family: var(--fontRamon);
+            font-weight: 500;
+            padding: 10px 15px 0px 15px;
+
+        }
+
+        .pai>.card>.conteudo>p {
+
+            font-size: 11px;
+            color: gray;
+            font-family: var(--fontRamon);
+            padding: 0px 10px 10px 15px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="pai">
+        <div class="card">
+            <div class="image">
+                <img src="image/thumb-curso1.png" alt="imagem 1">
+            </div>
+            <div class="conteudo">
+                <h1>Publique seu site na internet</h1>
+                <p>Uma das tarefas mais comuns que voce v ai se deparar durante sua carreira de programador front-end é
+                    publicar site. </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="image/thumb-curso2.png" alt="imagem 2">
+            </div>
+            <div class="conteudo">
+                <h1>Componentização de apps <br>com props + useState</h1>
+                <p>No react precisaremos passar informações entre componentes...</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="image/thumb-curso3.png" alt="imagem 3">
+            </div>
+            <div class="conteudo">
+
+                <h1>Modificando o <br>comportamento da página com Stake Hook e evento OnClick</h1>
+
+
+                <p>Uma das tarefas mas comuns do programnador fornt-end...</p>
+
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+</body>
+
+</html>
