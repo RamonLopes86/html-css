@@ -12,7 +12,13 @@
             height: 200px;
             border: 2px solid black;
             animation-name: mudarCor;
-            animation-duration: 6s;
+            animation-duration: 3s; /*duração da animação*/
+            animation-delay: 3s; /*atraso*/
+            animation-iteration-count:3; /*quantidade de vezes*/
+            animation-direction:normal ; /*direcao da animação*/
+            /* animation-fill-mode:forwards ;  */ /*animação termina no ultimo frame (quadro)*/
+            /*animation-fill-mode: backwards;*/ /*animação começa no primeiro frame (quadro)*/
+            animation-fill-mode: both;
         }
 
         /* @keyframes mudarCor {
@@ -23,17 +29,35 @@
         @keyframes mudarCor {
 
             0% {
-                background-color: red;
+                background-color: rgb(0, 38, 255);
+                border: none;
+                
             }
 
             50%{
 
-                background-color: blue;
+                
+                border-radius: 50%;
+                border: none;
+            }
+
+            70%{
+
+                width: 400px;
+                border: none;
+            }
+
+            90%{
+
+                width: 50px;
+                border: none;
             }
 
             100% {
 
                 background-color: yellow;
+                
+                
             }
           
             

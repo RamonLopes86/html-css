@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações parte 2</title>
+
+    <style>
+        .box{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            animation-name: mover;
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            animation-timing-function:;
+        }
+
+        @keyframes mover {
+
+            0% {
+                left: 0px;
+            }
+
+            100%{
+
+                left: 500px;
+                background-color: red;
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="box">
+
+
+    </div>
+
+
+    
+</body>
+</html>
