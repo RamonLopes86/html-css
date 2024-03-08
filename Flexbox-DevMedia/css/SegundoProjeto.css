@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+*{
+
+    margin: 0;
+    padding: 0;
+    font-family: roboto;
+    box-sizing: border-box;
+
+}
+
+@font-face {
+    font-family:'roboto';
+    src: url(../roboto/Roboto-Light.ttf);
+    
+}
+
+@font-face {
+    font-family:'robotobold' ;
+    src: url(../roboto/Roboto-Bold.ttf);
+}
+
+
+header{
+    font-family: roboto;
+    text-align: center;
+
+}
+
+header > h1{
+    font-size:25px;
+    font-family: robotobold;
+    padding: 10px 0px;
+}
+
+header > h1 > span{
+
+    font-size: 13px;
+    color: #4EBE9A;
+    
+    
+}
+
+.imagem-produto{
+
+    width: 100%;
+}
+
+main{
+
+    background-color: #F0F0F0;
+    padding: 50px;
+    
+}
+
+
+
+
+main > .pai > .card {
+
+  
+    width: 290px;
+    box-shadow: -2px 0px 10px 2px rgba(0, 0, 0, 0.438);
+    border-radius: 5px;
+    overflow: hidden;
+    flex-grow: 1;
+    
+}
+
+main > .pai {
+
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1024px;
+    margin: 0px auto;
+   
+}
+
+
+
+.conteudo{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+
+
+.rodape{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px 10px;
+    border-top: 1px solid rgba(128, 128, 128, 0.507);
+    margin: 5px 0px;
+    
+        
+    
+}
+
+.rodape .carrinho{
+
+    border: 1px solid rgba(128, 128, 128, 0.808);
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.rodape > p , .carrinho {
+
+    position: relative;
+    top: 2px;
+}
+
+.conteudo > .texto > h2  {
+
+    font-size: 20px;
+    font-family: robotobold;
+    padding: 20px 0px 20px 10px
+    
+
+}
+
+.conteudo > .texto > p {
+
+    
+    padding: 10px 10px;
+    font-size: 17px;
+}
+
+.conteudo > .texto > .info{
+
+    font-size: 13px;
+    font-family: robotobold;
+    
+}
+
+
