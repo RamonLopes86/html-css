@@ -4,8 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRANSITION 01</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .btn{
+            background-color: rgba(0, 60, 255, 0.603);
+            padding: 30px;
+            display: inline-block;
+            color: white;
+            font-size: 30px;
+            margin: 20px;
+            transition-property:all;
+            transition-duration:600ms;
+            /* transition-delay: 100ms; */
+            transition-timing-function: ease-in-out;
+        }
+
+        .btn:hover{
+
+            background-color:blue;
+            padding: 30px 40px;
+            color: red;
+            font-size: 12px;
+            border-radius: 10px;
+         
+            
+        }
+    </style>
 </head>
 <body>
+
+    <div class="btn">click</div>
     
 </body>
 </html>
