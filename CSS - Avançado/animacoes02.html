@@ -11,12 +11,16 @@
             width: 200px;
             height: 200px;
             border: 2px solid black;
-            animation-name: mover;
+            background-color: red;
+            /* animation-name: mover;
             animation-duration: 3s;
             animation-delay: 2s;
-            animation-iteration-count: infinite;
+            animation-iteration-count: 2;
             animation-fill-mode: forwards;
-            animation-timing-function:;
+            animation-timing-function:linear; */
+            
+            animation: mover 3s ease 0s infinite normal both;
+           
         }
 
         @keyframes mover {
@@ -25,10 +29,17 @@
                 left: 0px;
             }
 
-            100%{
+            50%{
 
                 left: 500px;
-                background-color: red;
+                
+            }
+
+            100%{
+
+                left: 0px;
+                
+
             }
 
         }
