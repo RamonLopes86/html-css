@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+
+
+    <script>
+
+        let resposta = prompt("qual sua 1 nota ")
+        let resposta2 = prompt("qual sua segunda nota ")
+
+        let media = (parseFloat(resposta) + parseFloat(resposta2))/2;
+        let res=""
+        if(media <=5){
+            
+            res = "burro"
+            
+        }else{
+
+            res="inteligente"
+
+        }
+
+
+        switch(res){
+
+
+            case "burro":
+            
+            alert("estude mais");
+
+            break;
+
+            case "inteligente" :
+
+            alert("continue estudando");
+            break;
+
+            default:
+
+            alert("erro")
+
+            break;
+
+
+        }
+
+
+      
+    </script>
+
+    
+</body>
+</html>

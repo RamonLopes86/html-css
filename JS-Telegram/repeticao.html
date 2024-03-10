@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetições</title>
+</head>
+<body>
+
+    <p id="para">
+
+    </p>
+
+    <script>
+
+        
+        let p = document.getElementById('para')
+        let span = document.createElement('span')
+        p.appendChild(span)
+
+        let res = "" /*criei a variavel vazia  para coloca-la dentro do for e pegar todos os itens e imprimir  la no span.innerText = res ( la no final do codigo*/
+        for(let c = 0 ; c<=10 ;c++){
+
+            res = res + c + "<br>" /*o br dentro das aspas faz quebrar cada elemento da repetição*/
+            
+        }
+
+        span.innerHTML = res
+        span.style.fontWeight="bold"
+        span.style.display="block"
+        span.style.margin="20px"
+        
+       
+
+        
+
+      
+       
+    </script>
+
+    <script>
+
+        
+
+
+    </script>
+    
+</body>
+</html>
