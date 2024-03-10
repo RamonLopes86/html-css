@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terceiro Projeto</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -13,28 +14,28 @@
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
 
-        body{
+        body {
             background-color: black;
         }
 
-        header{
+        header {
             text-align: center;
             padding: 50px 0px;
         }
 
-        footer{
+        footer {
 
             /* max-width: 90%; */
             max-width: 1040px;
             margin: 0px auto;
         }
 
-        #img-logo{
+        #img-logo {
             width: 120px;
         }
 
-       
-        .pai{
+
+        .pai {
 
             display: flex;
             flex-direction: row;
@@ -43,29 +44,43 @@
             justify-content: center;
             flex-wrap: wrap;
             padding: 0px 20px;
+
         }
 
-        .box{
+        .box {
 
             width: 300px;
-            border:  1px solid rgba(255, 255, 255, 0.555);
+            border: 1px solid rgba(255, 255, 255, 0.555);
             padding: 20px;
             text-align: center;
             flex-grow: 1;
             border-radius: 5px;
+
+
+        }
+
+        .box:hover {
+
+            transform: scale(1.02);
+            transition-property: all;
+            transition-duration: 300ms;
+            box-shadow:  0px 0px  10px 2px rgba(255, 255, 255, 0.301);
             
-           
+
         }
 
-      
-        img{
 
-        width:30px;
-        margin-left: 3px;
+        img {
+
+            width: 30px;
+            margin-left: 3px;
+
         }
 
-        .logo{
-           
+
+
+        .logo {
+
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -74,34 +89,71 @@
             margin: 0px 20px;
             padding-top: 50px;
             column-gap: 20px;
-           
+
+
         }
 
-        .criado{
+        .logo>.imagem>img:hover {
+
+            transition-property: all;
+            transition-duration: 100ms;
+            transform: scale(1.2);
+            filter: drop-shadow(2px 2px 1px rgba(255, 255, 255, 0.568))
+        }
+
+        .criado {
 
             display: flex;
             flex-direction: column;
-            
+
+
         }
 
         .criado p {
 
             padding-bottom: 4px;
             font-size: 18px;
-            
-           
+
+
+
+
         }
 
-       
-        
+        .botao {
+            position: absolute;
+            bottom: 50px;
+            right: 20px;
+            padding: 2px;
+            background-color: #DDDDDD;
+            border-radius: 4px;
+
+
+        }
+
+
+
+        .botao>img {
+
+            width: 30px;
+            position: relative;
+            right: 1px;
+            top: 2px;
+        }
+
+        footer {
+            position: relative;
+        }
+
+        /*media queries*/
     </style>
 </head>
+
 <body onresize="quebrar()">
 
-   <header>
+    <header>
         <img id="img-logo" src="image-proj4/logo.png" alt="logo da sorveteria">
-   </header>
-   <footer>
+    </header>
+    <footer>
         <div class="pai">
             <div class="box endereco">
                 <h2>ENDEREÇO</h2>
@@ -118,6 +170,9 @@
                 <P>aBERTO TODOS OS DIAS</P>
                 <P>10:00 - 22:00</P>
             </div>
+            <div class="botao">
+                <img src="image-proj4/seta-para-cima.png" alt="Seta para cima">
+            </div>
         </div>
         <div class="logo" id="idlogo">
             <div class="imagem">
@@ -131,35 +186,36 @@
             </div>
 
         </div>
-        
-   </footer>
-  
-  <script>
-    
-    
-    function quebrar(){
 
-        let logo = document.getElementById('idlogo')
-        let criado = document.getElementById('idcriado')
-        
-        if(window.innerWidth <= 414){
-            
-            
-            logo.style.flexDirection="column"
-            logo.style.textAlign="center"
-            criado.style.padding ="10px"
-            logo.style.transitionProperty="all"
-            logo.style.transitionDuration="800ms"
-            
+    </footer>
 
-            
+    <script>
 
-        }else{
-            logo.style.flexDirection="row"
+
+        function quebrar() {
+
+            let logo = document.getElementById('idlogo')
+            let criado = document.getElementById('idcriado')
+
+            if (window.innerWidth <= 414) {
+
+
+                logo.style.flexDirection = "column"
+                logo.style.textAlign = "center"
+                criado.style.padding = "10px"
+                logo.style.transitionProperty = "all"
+                logo.style.transitionDuration = "800ms"
+
+
+
+
+            } else {
+                logo.style.flexDirection = "row"
+            }
+
         }
 
-    }
-
-  </script> 
+    </script>
 </body>
+
 </html>
