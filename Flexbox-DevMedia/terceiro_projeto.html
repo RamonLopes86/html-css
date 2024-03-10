@@ -92,6 +92,17 @@
            
         }
 
+        @media (max-width:414px){
+
+            .logo{
+
+                transition-property: displey;
+                transition-duration: 800ms;
+                transition-delay: 100ms;
+            }
+
+        }
+
         
     </style>
 </head>
@@ -124,7 +135,7 @@
                 <img src="image-proj4/tik-tok.png" alt="tiktok">
                 <img src="image-proj4/instagram.png" alt="Instagram">
             </div>
-            <div class="criado">
+            <div class="criado" id="idcriado">
                 <p>Gelataria Gourmet</p>
                 <p>&copy Criado por Ramon Lopes</p>
             </div>
@@ -138,8 +149,23 @@
     
     function quebrar(){
 
-        let logo = document.getElementById('logo')
-        logo.style.display="column"
+        let logo = document.getElementById('idlogo')
+        let criado = document.getElementById('idcriado')
+        
+        if(window.innerWidth <= 414){
+            
+            
+            logo.style.flexDirection="column"
+            logo.style.textAlign="center"
+            criado.style.padding ="10px"
+            logo.style.transitionProperty="all"
+            logo.style.transitionDuration="800ms"
+
+            
+
+        }else{
+            logo.style.flexDirection="row"
+        }
 
     }
 
