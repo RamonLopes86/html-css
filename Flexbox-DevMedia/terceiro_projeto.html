@@ -33,11 +33,7 @@
             width: 120px;
         }
 
-        img{
-
-            width:40px;
-        }
-
+       
         .pai{
 
             display: flex;
@@ -61,10 +57,45 @@
            
         }
 
+      
+        img{
 
+        width:30px;
+        margin-left: 3px;
+        }
+
+        .logo{
+           
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            /* padding: 0px 20px; */
+            margin: 0px 20px;
+            padding-top: 50px;
+            column-gap: 20px;
+           
+        }
+
+        .criado{
+
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        .criado p {
+
+            padding-bottom: 4px;
+            font-size: 18px;
+            
+           
+        }
+
+        
     </style>
 </head>
-<body>
+<body onresize="quebrar()">
 
    <header>
         <img id="img-logo" src="image-proj4/logo.png" alt="logo da sorveteria">
@@ -87,7 +118,7 @@
                 <P>10:00 - 22:00</P>
             </div>
         </div>
-        <div class="logo">
+        <div class="logo" id="idlogo">
             <div class="imagem">
                 <img src="image-proj4/whatsapp.png" alt="whats">
                 <img src="image-proj4/tik-tok.png" alt="tiktok">
@@ -95,12 +126,23 @@
             </div>
             <div class="criado">
                 <p>Gelataria Gourmet</p>
-                <p>Criado por Ramon Lopes</p>
+                <p>&copy Criado por Ramon Lopes</p>
             </div>
 
         </div>
         
    </footer>
+  
+  <script>
     
+    
+    function quebrar(){
+
+        let logo = document.getElementById('logo')
+        logo.style.display="column"
+
+    }
+
+  </script> 
 </body>
 </html>
