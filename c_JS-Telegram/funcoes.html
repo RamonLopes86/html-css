@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNÇÕES</title>
+</head>
+<body>
+
+
+    <script>
+
+        let x = parseFloat(prompt("qual a primeira nota"))
+        let y = parseFloat(prompt("Qual a segunda nota "))
+
+
+        // let res = function(n1,n2){
+
+        //     let m = (n1+n2)/2;
+        //     return m.toFixed(2)
+        // }
+
+        // document.write(res(n1,n2)) 
+        
+        /*quando colocamos a função em uma variável, não precisamos declarar um nome para ela, afinal a variavel se tornará a função;*/
+        
+
+        // aqui abaixo temos a função normal , com declaração de parametros ou sem parametros, nesse caso precisamos atribuir um nome a ele, no nosso exemplo demos o nome de media :
+
+        // function media(n1,n2){
+
+        //     let m = (n1+n2)/2
+
+        //     return m.toFixed(2)
+
+        // }
+
+        // document.write(media(n1,n2))
+
+        
+        /*e aqui temos um exemplo de arrow function*/
+
+        let media = (x,y) => {
+
+            return (x+y)/2
+        }
+
+      
+
+        document.write(media(x,y))
+
+
+
+
+    </script>
+    
+</body>
+</html>

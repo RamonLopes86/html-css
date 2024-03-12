@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJETOS</title>
+</head>
+
+<body>
+
+    <script>
+        /*Padrão de um objeto*/
+
+        // let aluno = {
+
+        //     nomes: ["Ramon", "Gustavo", "Assis"],
+        //     nota: [7.5, 8, 9],
+        //     status:["apro" , "rep" , "apro"]
+
+
+
+        // }
+
+
+        /*Objeto com medtodo*/
+
+        let CalMedia = function (n1, n2) {
+
+            let res = (this.notas[0] + this.notas[1] + this.notas[2]) / 2
+
+            return res.toFixed(2)
+        }
+
+        let aluno = {
+
+            nome: "Ramon",
+            notas: [8, 10 , 8],
+
+            media: CalMedia
+
+        }
+
+
+
+
+        let aluno1 = {
+
+            nome: "Joao",
+            notas: [2, 2 , 5],
+
+            media:CalMedia
+        }
+
+
+
+
+        document.write(aluno.nome + " - " + aluno.media() + "<br>")
+
+        document.write(aluno1.nome + " - " + aluno1.media() + "<br>")
+
+
+        let fala = function (n1,n2,n3,n4){
+
+          
+            let val = (this.nota[0] + this.nota[1] + this.nota[2] + this.nota[3])/4
+            return val
+        }
+
+        let novo = {
+
+            nome: "Pedro",
+            nota: [5,7,7,2],
+
+            media:fala,
+
+
+        }
+
+        alert(novo.nome + "- " + "sua media é " + novo.media())
+
+    </script>
+
+</body>
+
+</html>

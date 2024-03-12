@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando</title>
+</head>
+<body>
+
+    <script>
+
+        let alunos = ["ramon" , "pedro" , "tiago"];
+        let nota1 = [7 , 8.0 , 4];
+        let nota2 = [ 7 , 9 , 8];
+
+        function passou(media){
+
+                if(media>7){
+
+                    return "passou";
+
+                }else{
+                    return "perdeu";
+                }
+
+        }
+
+        
+
+        for(let index in alunos){
+
+            
+
+            let m = (nota1[index] + nota2[index] )/2
+            let res = ""
+            let res2 = passou(m)
+            if(m>= 7){
+
+                res = "aprovado"
+            }else {
+
+                res = "reprovado"
+            }
+
+            document.write(alunos[index]  + " - " + nota1[index] + " - " + nota2 [index] + " - " +  m +  " - " + res + " - " +  res2 + "<br>")
+
+        }
+
+    </script>
+    
+</body>
+</html>
