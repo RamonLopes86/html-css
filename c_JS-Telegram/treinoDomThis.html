@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This no onClick</title>
+</head>
+<body>
+
+    <h1 id="tx1">Clique no texto</h1>
+
+    <h1 id="tx2">Clique no texto2</h1>
+
+
+
+    <script>
+
+        let tx1 = document.getElementById('tx1')
+        let tx2 = document.getElementById('tx2')
+
+
+        
+
+        tx1.onclick = modificar
+        tx2.addEventListener('click', modificar)
+        
+        function modificar(){
+        
+           
+          this.innerHTML = this.innerHTML.toUpperCase()
+            
+
+        }
+
+       /*o this so funciona se a chamada nesse exemplo para o onclik for dentro do script e nao inline na tag h1 */
+       
+
+
+    </script>
+</body>
+</html>

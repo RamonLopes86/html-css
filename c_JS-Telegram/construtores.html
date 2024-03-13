@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--construtores-->
+
+    <script>
+          
+    //     function criarAluno(nome , mat ,  nota1, nota2){
+
+    //         return{
+
+    //             nome:nome,
+    //             mat: mat,
+    //             nota1: nota1,
+    //             nota2: nota2,
+    //             media:function () {
+
+    //                 return (this.nota1 + this.nota2 )/2
+    //             }
+
+    //         }
+
+
+    //     }
+
+    //     let turma = [
+
+    //         criarAluno("Ramon" , 435320 , 8.5 , 9.72),
+    //         criarAluno("Walky", 171, 2.75 , 1.25),
+
+    //     ]
+
+
+    //   document.write(turma[0]) /*não esta imprimindo na tela , pois o document write , mas esta correto.*/
+       
+        
+    // formas de criar um objeto;
+
+    let a = { nome:"Ramon" , idade:25 , prof: "TS"} /*priomeira maneira*/
+
+    function obj(){ /*atraves de uma função sem parametro*/
+
+        return{
+            nome: "ramon",
+            idade: 25,
+            prof:"TS" 
+        }
+    }
+
+    function obj2( n , i , p){ /*função com parametro*/
+
+        return {
+
+            nome: n,
+            idade:i,
+            profissao:p
+
+        }
+
+    }
+
+    /*chamando a função com os parametros*/
+
+    obj2("Ramon" , 25 , "ts")
+
+         
+    function obj3(n,i,p){  /*criando objeto atraves do instanciamento*/
+
+        this.nome = n;
+        this.idade = i;
+        this.profissao = p;
+
+    }
+
+
+    let empregado = new obj3("Ramon" , 38 , "ts")
+           
+
+            
+    </script>
+    
+</body>
+</html>
