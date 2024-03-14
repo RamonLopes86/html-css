@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos </title>
+
+    <style>
+        #btn{
+
+            display: inline-block;
+            background-color: gray;
+            padding: 5px;
+            border-radius: 10px;
+            color: white;
+            margin-top: 20px;
+        
+        }
+
+        .box1{
+
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+
+        <div>
+            <p id="parag">clique em mim</p>
+        </div>
+
+        <div class="box1">
+            <input oninput="temporeal(this)" type="text" name="bloco" id="idbloco" autocomplete="off">
+        </div>
+
+        <div id="btn" onclick="esconder()">
+            <span>Clique</span>
+        </div>
+    </main>
+    
+    <script>
+
+        let p1 = document.getElementById('parag');
+        let blocoTexto = document.getElementById('idbloco')
+        let botao = document.getElementById('btn')
+
+        p1.addEventListener('click' , clicar)
+
+        
+
+        function clicar(){ /*poderia colocar o this afinal ele iria fazer a referencia nesse contexto ao proprio elemento p1*/
+
+            p1.innerHTML ="clique em mim";
+            p1.style.fontSize="40px"
+            p1.style.transitionProperty="all"
+            p1.style.transitionDuration="2s"
+            p1.style.backgroundColor="red"
+            p1.style.display="inline-block"
+
+            this.style.color="gray" /*nesse contexo , usando  this para fixar*/
+
+        }
+
+        function change(){ /*quando eu retiro o foco*/
+
+            p1.innerText = blocoTexto.value /*p valor que eu digitar , quando eu retirar o foco , ele vai escerver no meu p1*/
+
+            p1.style.fontSize="40px"
+        }
+
+        function temporeal(x){ /*escrita em tempo real no input*/
+
+            p1.innerText = x.value
+            
+        }
+
+        function esconder(){
+
+            p1.style.opacity="0.5"
+        }
+
+        
+    </script>
+</body>
+</html>

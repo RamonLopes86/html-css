@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACESSANDO ELEMENTOS</title>
+
+
+    <style>
+
+        .segundo{
+
+            background-color: red;
+            width: 200px;
+            border-radius: 20px;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>
+
+        </h1>
+    </header>
+    <main>
+        
+        <p id="paragrafo">primeiro</p>
+
+        <p meuatt="Ramon" class="segundo">Segundo</p>
+
+    </main>
+
+    
+    
+    <script>
+       
+        let p1 = document.getElementById('paragrafo')
+        let p2 = document.getElementsByClassName('segundo')[0]
+
+       p1.innerHTML = "uma fomma de modificar valor " /*essa forma pode inclusive receber tag por exemplo */
+
+       p1.innerHTML = "<h1> nova forma</h1>"
+
+       /*outra forma */
+
+       p1.innerText = " Tambem é uma forma" /*mas aqui nao converte a tag.*/
+
+       /*outra forma */
+
+       p1.textContent = "mais uma forma"
+
+
+       /*podemos alterar tambem a classe pre definida*/
+
+       p1.className = "" /*aspas vazia informna que a classe foi apagada do seu HTML*/
+
+
+      let AcessandoAtributo = p1.getAttribute('meuatt')
+
+      let modAtributo = p1.setAttribute("meuatt" , "Eraldo")
+
+      let = criandoAtributo = p1.getAttribute("novoatt" , "Carina")
+
+      
+
+        
+
+        
+
+     
+        
+
+        
+
+     
+        
+
+        
+
+        
+    </script>
+</body>
+</html>
