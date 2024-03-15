@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIS SOBRE EVENTOS</title>
+</head>
+<body>
+
+        <!-- aqui eu passei a função this dentro do evento que foi chamando dentro do proprio elemento h1 , pra mostrar formas diversas de chamar um evento e utilização do this. aqui eu nem levei o h1 para o script atraves do get element , pq  como passei o evento o nome da função com o this dentro siginifica dizer que o this vai ser exatamente o meu elemento em questão , nesse caso a aplicação do evento vai ser a mesma tanto para o paragrafo quanto para o h1 , afinal ambos estão com o this.-->
+
+        <h1 onmouseover="hover(this) " onmouseout="sair(this)">Teste do evento Onmouseouver</h1>
+        <!-- Parecido com a pseudo-classe – hover , mas aqui em forma de evento no dom, ou seja , esse evento vai ser executado quando o mouse passar por cima. -->
+
+        <p onmouseover="hover(this) " onmouseout="sair(this)">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque beatae natus eaque quas atque incidunt porro, quidem, sequi sunt doloribus ea cumque sit soluta consequuntur adipisci. Nesciunt voluptatum illum officia.
+        </p>
+
+
+
+    <script>
+        /*falaremos sobre o evento cgamando onload*/
+        /*onload vai  ser executado quando toda pagina for carregada.*/
+
+        
+        function hover(i){
+
+            i.style.backgroundColor="blue"
+            i.style.display="inline-block"
+
+
+        }
+
+        function sair(i){
+
+            i.style.backgroundColor="white"
+        }
+
+
+         
+
+    </script>
+    
+</body>
+</html>

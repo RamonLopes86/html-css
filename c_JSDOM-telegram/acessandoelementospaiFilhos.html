@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACESSANDO ELEMENTOS PAIS E FILHOS</title>
+</head>
+<body>
+
+    <!-- como acessar elemento pai e filhos com o DOM -->
+    
+    <div id="box1">
+        <h1>Titulo</h1>
+        <p>Paragrafo</p>
+    </div>
+
+    <div id="box2">
+        <h1 id="tt">Titulo2</h1>
+        <p>Paragrafo2</p>
+    </div>
+
+
+    <script>
+
+        let box1 = document.getElementById('box1')
+
+       let titulo =  box1.children[0] /*pegando o elemento h1 dentro da div com o id box1*/
+
+       let div = titulo.parentElement /*com o elemento um ja dentro da variavel titulo eu usei o parentElement para pegar o elemento pai a qual esse filho esta inserido, no caso a div da id box1*/
+
+       div.style.backgroundColor="red"
+
+      
+
+       
+
+
+       /*-----------------------------------*/
+
+       /*buscando o elemento pai agora com a div box2*/
+
+        let t2 = document.getElementById('tt')
+
+        let pai = t2.parentElement
+
+        pai.style.backgroundColor="blue"
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

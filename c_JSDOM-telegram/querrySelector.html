@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Querry Selector </title>
+</head>
+<body>
+    <div id="box">
+        <h1>Titulo </h1>
+        <p>Paragrafo</p>
+        <p>seg Paragrafo</p>
+        <p>Ter Paragrafo</p>
+        <p>qua Paragrafo</p>
+        <p>qui Paragrafo</p>
+    </div>
+
+
+
+    <script>
+
+        /*querrySelector */
+
+        let p = document.querySelector("#box p")
+
+        p.style.color="red"
+
+        /*Aqui mesmo com mais de um paragrafo ele so ira reconhecer o primeiro na estilização aplicada.*/
+
+        /*querrySelectorAll*/
+
+        let p2 = document.querySelectorAll("#box p")[2]
+
+        p2.style.color = "green"
+
+        /*no all todos os elementos sao pegos , mas em forma de array e por isso para acessar um paragrafo especifico, precisamos utilizar o index passando dentro de colchetes.*/
+       
+        
+
+    </script>
+</body>
+</html>
