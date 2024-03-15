@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Match</title>
+</head>
+<body>
+
+
+   
+
+
+
+
+
+
+
+
+        <script>
+
+            
+               let pi = Math.PI /*aqui tras o numero PI*/
+
+               let e = Math.E  /*tras o numero 2.71828.... esse numero é fixo , não vai mudar a cada vez que voce chamar*/
+
+               let raiz = Math.sqrt(16) /*aqui voce consegue fazer calculos de raiz quadrada*/
+
+               let potencia = Math.pow(2,3) /*o priomeiro numero passado é base e o segundo é o exponencial , ou seja 2^3 = 8*/
+
+               let aleatorio = Math.random() /*passa um valor aleatorio entre 0 e 1 ,s e quiser um numero maior a depender do intervalor só é multiplicar por 10,100, etc... o resultado aparecerá com muitos numeros depois da virgula, mas para ajustar isso podemos utilizar o toFixed() e passar dentro dos parenteses o valor de casas que quer depois da virgula ou utilizr o Math.round*/
+
+               let valor = Math.random()*10
+
+               let aleatoroArrendondado = Math.round( valor) /*com o math.round os numeros serão arrendonadado para um unico numero inteiro*/
+
+               /*Importante 
+               
+                no round se o numero aleatorio for por exemplo 5.5 para cima , ele assume 6 e se for de 5.4 para baixo ele assumirá o 4.
+                
+                contudo , podemos mudar isso com o floor (piso)
+
+               */
+
+               let novoValor = Math.random()*10
+
+               let aleatorioArredondado2 = Math.floor(novoValor) /*aqui ele so vai realmente assumir o numero se ele for o numero e nao vai aproximar caso por exemplo o numero dê 5.9*/
+
+               let novoValor2 = Math.random()
+
+               let aleatorioArredondado3 = Math.ceil(novoValor2) /*Aqui é o inverso do Floor, nesse caso ele vai arredondar sempre para cima, ou seja, se tiver o valor de 5.001 ele vai retornar 6*/
+
+               document.write(aleatorioArredondado2)
+
+
+
+
+               
+
+              
+
+
+
+
+
+
+
+
+
+              
+
+        </script>
+</body>
+</html>
