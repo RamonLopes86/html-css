@@ -7,17 +7,20 @@
 
     <style>
         
-        h1:hover{ /*quando o mouse passar por cima do elemento*/
+        #h:hover{ /*quando o mouse passar por cima do elemento*/
 
-            color: red;
+            color: rgb(153, 89, 89);
         }
 
         
 
         a:visited{ /*quando o link for clicado ( site ja tiver sido visitado*/
 
-            color: red;
+            color: rgb(245, 0, 0);
+            font-weight: bold;
         }
+
+
 
 
 
@@ -35,7 +38,7 @@
 
         /*obs : vc pode tambem misturar duas pseudoclass , veja : */
 
-        section > :last-of-type:hover{ /*aqui eu juntei as pseudoclass last-of-type com hover */
+        #teste1 > :last-of-type:hover{ /*aqui eu juntei as pseudoclass last-of-type com hover */
 
             font-size: 2rem;
             transition-property: all;
@@ -49,19 +52,262 @@
         }
 
 
-        div > p:nth-of-type(odd){ /*impares*/
+        .number > p:nth-of-type(odd){ /*impares*/
 
             color: red;
             width: 200px;
             background-color: black;
         }
 
-        div > p:nth-of-type(even){ /*pares*/
+        .number > p:nth-of-type(even){ /*pares*/
 
             color: blue;
             width: 200px;
             background-color: gray;
         }
+
+        .fristlist > li {
+
+            list-style-type: none;
+        }
+
+        .fristlist > li::before { /*como colocar um emoji com o content*/
+
+            content:"\1F357";
+            
+
+        }
+
+        .secondlist > li{ 
+
+           list-style-type: none;
+          
+           
+            
+
+        }
+
+        .secondlist>li::before{ /*utilizar o backgroung image para colocar uma imagem especifica como list style*/
+
+            content: '';
+           background-image: url(image/icone.jpg);
+           width: 20px;
+           height: 20px;
+           display: inline-block;
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+           position: relative;
+           top: 5px;
+           right: 2px;
+        }
+
+
+        /*DIFERENTE O OFTYPE, QUE ESTILIZA A POSIÇÃO, O CHILD VAI ESTILIZAR BASEADO NOS FILHOS EM RELAÇÃO AO SEU ELEMENTO PAI;*/
+
+
+        #father-element > :nth-child(){ /*dentro do elemento pai ele vai buscar o primeiro elemento filho. isso por conta do valor 1 que passei nos parenteses;*/
+
+           color: red; 
+        }
+
+        #father-element > :last-child{ /*o ultimo elemento filho com relação ao seu pai*/
+
+            color: rgb(0, 0, 201);
+        }
+
+       #corpo{
+
+        background-color: gray;
+       }
+
+      #corpo > :nth-child(2){ /*estilza de acordo com a posição em relação ao seu elemento pai independentemente do tipo*/
+
+        background-color: red;
+      }
+
+
+      /*vamos ver agora o firs-tline e first-latter*/
+
+      .box > p::first-line{
+
+        color: blue;
+      }
+
+      .box > p::first-letter {
+
+            font-size: 30px;
+            font-family: cursive;
+            font-weight: bold;
+
+      }
+
+
+
+      .box2 li {
+
+        list-style: none;
+        margin-bottom: 10px;
+      }
+
+      .box2 li::before{
+
+        /* content:'\1F517';   aqui eu utilizao o content para colocar o emoji com seu codigo com barra invertida*/
+
+        content: '\1F517';
+       
+      }
+
+      /*podemos tambem colocar no content um conteudo texto e estilizar da maneira que quisermos */
+
+      .box2 > ul  li::after{
+
+        content: 'link';
+        margin-left: 5px;
+        background-color:purple;
+        text-decoration: underline;
+        padding: 5px;
+        border-radius: 5px;
+        color: white;
+        font-weight:lighter;
+
+      }
+
+      
+      .box3 > ul li {
+
+        list-style-type: none;
+        padding-bottom: 10px;
+       
+        
+      }
+
+
+      .box3 li::after{
+
+        content: '';
+        display: inline-block;
+        background-image:url(image/icone.jpg) ;
+        width: 20px;
+        height: 20px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        top: 5px;
+        left: 3px;
+
+      }
+
+     
+
+     figure img {
+
+        opacity: 20%;
+
+     }
+
+     figure img:hover{
+
+        opacity: 100%;
+        transition-property: all;
+        transition-duration: 800ms;
+
+     }
+
+ 
+     .box4{
+
+        position: relative;
+     }
+
+     .box4 img{
+
+       width: 100%;
+       height: 100%;
+      
+       
+
+     }
+
+
+     .box4::after{
+
+        content:'';
+        width: 100%;
+        height:100%;
+        position: absolute;
+        background-color: black;
+        left:0;
+        top: 0;
+        opacity: 30%;
+        
+        
+   
+      
+     }
+
+     .sp{
+
+        position: absolute;
+        bottom: 0;
+        color: white;
+        font-weight: bold;
+        top:60%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        
+
+        
+
+       
+        
+     }
+
+     .sp h1 {
+
+        font-size: 50px;
+     }
+
+   
+   
+  
+
+     /*travalhando com o hover e opacity*/
+
+     .mais-imagens {
+
+        text-align: center;
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        
+        
+        
+        
+     }
+
+     .mais-imagens div {
+
+        width: 500px;
+        flex-grow: 1;
+     }
+
+     .mais-imagens div img {
+
+        width: 100%;
+        opacity: 0.5;
+     }
+
+     .mais-imagens div img:hover{
+
+        opacity: 1;
+        transition-property: all;
+        transition-duration: 1s;
+     }
+    
+     
     
      
     </style>
@@ -74,7 +320,7 @@
         Titulo
     </h1>
 
-    <section>
+    <section id="teste1">
         <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro qui velit, non vero delectus at necessitatibus. Delectus dolorum quos at dignissimos. Quos optio, minus modi delectus pariatur iste illum necessitatibus!
         </p>
@@ -95,14 +341,20 @@
        <p>teste3</p>
     </section>
 
-    <ul>
+    <ul class="fristlist">
         <li>a</li>
         <li>b</li>
         <li>c</li>
     </ul>
+
+    <ul class="secondlist">
+        <li>x</li>
+        <li>z</li>
+        <li>w</li>
+    </ul>
   
     
-    <div>
+    <div class="number">
 
         <p>1</p>
         <p>2</p>
@@ -114,6 +366,88 @@
 
 
 
+
+    <div id="father-element">
+
+        <h1>titulo</h1>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, consequatur omnis? Dolores, eligendi illo. Alias quidem saepe, cumque ipsum reiciendis numquam laboriosam voluptatum distinctio nesciunt? Tempora at harum voluptatibus veniam.</p>
+
+        <img style="width: 80px;" src="image/icone.jpg" alt="imagem de verificado">
+
+        <span>ola</span>
+
+        <p>jgasajudujagdoqwidfq</p>
+
+        <p>uhiwhuidqhiuowwwnnnnnnnnn</p>
+    </div>
+
+    <main id="corpo">
+
+        <span>amanha trabalho</span>
+        <p>Ramon</p>
+        <p>xx</p>
+        <p>zz</p>
+        <p>re</p>
+        <p>eed</p>
+
+
+        <div class="box">
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, vero. Incidunt pariatur <br>veritatis molestiae qui deleniti labore eos voluptatibus id facilis dicta, iste esse a, ea optio, maiores suscipit similique?
+            </p>
+        </div>
+
+
+       
+    </main>
+
+    <div class="box2">
+        <ul>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link2</a></li>
+            <li><a href="#">link3</a></li>
+        </ul>
+
+        
+    </div>
+
+    <div class="box3">
+
+        <ul>
+            <li>verificado</li>
+            <li>Verificado2</li>
+        </ul>
+
+    </div>
+
+
+    <figure>
+        
+        <img style="width: 500px;" src="image/icone.jpg" alt="imagem">
+        
+    </figure>
+
+
+    <div class="box4">
+
+        <img src="image/sp cidade ok.png" alt="imagem sp">
+
+        <div class="sp">
+            <h1>SÃO PAULO</h1>
+        </div>
+
+    </div>
+
+    <div class="mais-imagens">
+
+        <div class="ig1"><img class="ft ig1" src="image/sp cidade ok.png" alt=""></div>
+        <div><img class="ft" src="image/sp cidade ok.png" alt=""></div>
+        <div><img class="ft" src="image/sp cidade ok.png" alt=""></div>
+        <div><img class="ft" src="image/sp cidade ok.png" alt=""></div>
+
+    </div>
+    
 
 </body>
 </html>
