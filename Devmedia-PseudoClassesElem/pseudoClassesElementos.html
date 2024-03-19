@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSEUDO CLASSES E ELEMENTOS</title>
+
+    <style>
+        
+        h1:hover{ /*quando o mouse passar por cima do elemento*/
+
+            color: red;
+        }
+
+        
+
+        a:visited{ /*quando o link for clicado ( site ja tiver sido visitado*/
+
+            color: red;
+        }
+
+
+
+        /* PseudoClasses : oftypes */
+
+        section > p:last-of-type{ /*pegando o ultimo elemento p dentro da sessão*/
+
+            color: red;
+        }
+
+        section > P:first-of-type{ /*AQUI SERIA O PRIMEIRO PARAGRAFO */
+
+            background-color: palegreen;
+        }
+
+        /*obs : vc pode tambem misturar duas pseudoclass , veja : */
+
+        section > :last-of-type:hover{ /*aqui eu juntei as pseudoclass last-of-type com hover */
+
+            font-size: 2rem;
+            transition-property: all;
+            transition-timing-function: ease;
+            transition-duration: 200ms;
+        }
+
+        section > :nth-of-type(2){ /*aqui voce escolhe qual tag do elemento pai voce vai estilizar passando o parametro nos parenteses;*/
+
+            background-color: pink;
+        }
+
+
+        div > p:nth-of-type(odd){ /*impares*/
+
+            color: red;
+            width: 200px;
+            background-color: black;
+        }
+
+        div > p:nth-of-type(even){ /*pares*/
+
+            color: blue;
+            width: 200px;
+            background-color: gray;
+        }
+    
+     
+    </style>
+</head>
+<body>
+
+    <a href="#">Clique</a>
+
+    <h1 id="h">
+        Titulo
+    </h1>
+
+    <section>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro qui velit, non vero delectus at necessitatibus. Delectus dolorum quos at dignissimos. Quos optio, minus modi delectus pariatur iste illum necessitatibus!
+        </p>
+        <P>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eligendi voluptate ad magni animi fugiat similique, ducimus mollitia quibusdam, eos eveniet illo. Odit provident odio aperiam nemo rerum, ducimus minima?
+
+        </P>
+
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero nostrum totam vel facilis ea, similique delectus natus quae debitis et inventore deserunt culpa nesciunt est expedita fugit facere. Sed, nesciunt!
+        </p>
+    </section>
+
+    <section id="teste">
+
+       <p>teste1</p>
+       <p>teste2</p>
+       <p>teste3</p>
+    </section>
+
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ul>
+  
+    
+    <div>
+
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+
+    </div>
+
+
+
+
+</body>
+</html>
