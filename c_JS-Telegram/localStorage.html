@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCAL STORAGE</title>
+</head>
+<body>
+
+
+
+    <h1 id="h1"></h1>
+    <input type="text" name="texto" id="idtexto">
+
+
+
+ 
+    
+
+    
+    <script>
+
+        //SERVE PARA ARMAZENAR DADOS NA MEMORIA , NOS ARQUIVOS DO NAVEGADOR E PODER USAR DEPOIS.  
+
+        let nomeArmazenado = localStorage.setItem("nome" , "Carina") /*armazenei na memoria onde nome é a propriedade e Ramon é o valor*/
+
+
+        //  como chamar esse valor armazenado na memoria
+
+        let resgatarMemoria = localStorage.getItem("nome")
+
+        
+        console.log(resgatarMemoria)
+
+
+        /*para apagar so utilizar o remove */
+        /*para limpar a memoria , use o clear*/
+
+
+        
+       
+        
+
+        // let aluno = {nome:"ramon", idade:21}
+
+
+        // localStorage.setItem('valor' , JSON.stringify(aluno))
+
+
+        let b = localStorage.getItem('valor')
+
+        let c = JSON.parse(b)
+
+        console.log(c)
+
+        
+
+        
+       
+
+
+
+        
+        
+       
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    
+
+
+
+
+
+<script>
+
+// JSON E A REPRESENTAÇÃO DE UM OBJETO
+// JSON É JAVA SCRIPT OBJECT NOTATION OU NOTAÇÃO DE UM OBJETO JS
+
+let a = {
+
+    aluno:"Ramon",
+    nota: 8.5
+
+}
+
+
+let convertString = JSON.stringify(a)
+
+console.log(convertString)
+
+
+
+let b = '{"nome":"Ramon" , "idade":38}'
+
+
+let convertObject = JSON.parse(b)
+
+console.log(convertObject)
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
