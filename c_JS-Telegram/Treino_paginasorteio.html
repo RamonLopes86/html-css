@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: black;
+    }
+
+    body{
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .box{
+
+        width: calc(700px - 20px);
+        margin: 0px 10px;
+        height: 500px;
+        border: 1px solid white;
+        position: relative;
+        
+    }
+
+    button{
+
+        color: black;
+        font-weight: bold;
+        border: 1px solid white;
+        padding: 10px;
+        position: absolute;
+        left: 50%;
+        top: 70%;
+        transform: translate(-50% , -50%);
+        background-color: white;
+        cursor:pointer;
+        border: none;
+
+       
+    }
+
+    button:hover{
+
+        transition-property: all;
+        transition-duration: 200ms;
+        background-color: red;
+        color: white;
+        border: none;
+        box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.808);
+    }
+
+    .resultado{
+
+        background-color: white;
+        width: 300px;
+        height: 50px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50% ,  -50%);
+        text-align: center;
+        font-size: 20px;
+        line-height: 45px;
+      
+
+        
+    }
+
+
+  </style>
+</head>
+<body>
+
+    <!-- codigo para sorteio  -->
+  
+   <section class="box">
+        <div class="resultado" id="res">
+            <!-- texto -->
+        </div>
+
+        <button id="botao">SORTEAR</button>
+   </section>
+
+
+  <script>
+
+
+
+        let bloco = document.getElementById('res')
+        let botao = document.getElementById('botao')
+
+        let pessoas = ["Eraldo" , "Ramon" , "Jose" , "Carina"]
+        
+
+        
+        botao.onclick = mostrar
+
+        function mostrar(){
+
+            let np = pessoas.length;
+
+          
+            let aleatorio = Math.floor(Math.random() * np );
+            
+            
+
+
+            
+            bloco.innerHTML = "O GANHADOR(A) " + pessoas[aleatorio].toUpperCase();
+
+            
+        
+
+        }
+
+  </script>  
+</body>
+</html>

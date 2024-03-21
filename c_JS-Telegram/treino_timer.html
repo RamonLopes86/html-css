@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIMER</title>
+
+    <style>
+
+      
+
+     
+
+    </style>
+</head>
+<body>
+
+    <h1>
+        
+        setTimeOut
+    </h1>
+    
+    <button onclick="mudarTexto()">CLIQUE</button>
+
+    <script>
+
+        let h = document.getElementsByTagName('h1')[0]
+
+
+        function mudarCor(){
+
+            h.style.color="green" 
+            h.style.transitionProperty="all";
+            h.style.transitionDuration="900ms" /*tempo da transição da mudança da cor*/
+        }
+        
+       
+        function mudarTexto(){
+
+            h.innerHTML = "MUDEI"
+
+            // pode ser diretamente coma propriedade transition na função ou utilizando o set time
+            // h.style.transitionProperty="all"
+            // h.style.transitionDelay="3s"
+            // h.style.color="blue"
+
+            setTimeout(mudarCor, 1000) /*delay para mudar a cor*/
+
+        }
+
+    </script>
+</body>
+</html>
