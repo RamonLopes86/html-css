@@ -15,17 +15,26 @@
 </head>
 <body>
 
-    <h1>
-        
-        setTimeOut
-    </h1>
+    <h1>setTimeOut</h1>
+
+    <h2></h2>
     
-    <button onclick="mudarTexto()">CLIQUE</button>
+    <button onclick="mudarTexto()">CLICK setTimeout</button>
+
+    <button>CLICK setInterval</button>
+
+    <input onclick="parar() ; parar2()" type="button" value="CLICK parar">
+
+    
 
     <script>
 
+
+         /*USANDO AGORA O SET TIMEOUT*/
+
         let h = document.getElementsByTagName('h1')[0]
 
+        let stop2;
 
         function mudarCor(){
 
@@ -37,16 +46,66 @@
        
         function mudarTexto(){
 
-            h.innerHTML = "MUDEI"
+            
 
             // pode ser diretamente coma propriedade transition na função ou utilizando o set time
             // h.style.transitionProperty="all"
             // h.style.transitionDelay="3s"
             // h.style.color="blue"
 
-            setTimeout(mudarCor, 1000) /*delay para mudar a cor*/
+            stop2 = setTimeout(mudarCor, 1000) /*delay para mudar a cor*/
 
         }
+
+
+
+        /*USANDO AGORA O SET INTERVAL*/
+
+        var num = 0
+        let stop;
+
+        let h2 = document.getElementsByTagName('h2')[0]
+        let botao = document.getElementsByTagName('button')[1]
+
+        botao.addEventListener('click' , contar)
+
+        function intervalo(){
+
+    
+          h2.innerHTML = h2.innerHTML + " " + num
+
+            num = num + 1 
+
+            
+
+        }
+
+
+        function contar(){
+
+        
+          stop =   setInterval(intervalo , 1000)
+        }
+
+        
+        function parar(){
+
+            clearInterval(stop)
+        }
+
+        function parar2(){
+
+            clearTimeout(stop2)
+        }
+
+
+       
+
+        
+
+
+        
+    
 
     </script>
 </body>

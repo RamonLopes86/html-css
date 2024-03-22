@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TREINANDO :NOT</title>
+
+    <style>
+
+        section{
+
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        div{
+
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            
+        }
+
+        div:hover{
+
+            background-color: purple;
+            transition-property: all;
+            transition-duration: 800ms;
+            transition-timing-function: ease-in-out;
+            transform: scale(1.04);
+            cursor: pointer;
+            opacity: 1;
+        }
+
+      
+        
+        section:hover :not(:hover){ /*todo meu elemento pai vai per essas configurações de estilo quando eu passar o mouse em cima , exceto (:not) a que estiver com o mouse em cima ( parece doido, mas faz sentido) */
+
+            opacity: 0.4;
+            transition-property: all;
+            transition-duration: 800ms;
+            transition-timing-function: ease-in-out;
+        }
+
+
+    </style>
+</head>
+<body>
+
+        <section>
+            <div class="item-1"></div>
+            <div class="item-2"></div>
+            <div class="item-3"></div>
+        </section>
+    
+</body>
+</html>
