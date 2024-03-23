@@ -52,6 +52,12 @@
             
         }
 
+        span{
+
+            display: block;
+            padding: 5px 0px;
+        }
+
     </style>
 </head>
 <body>
@@ -63,18 +69,20 @@
         <form action="teste.php" method="get">
 
             <div>
-                <input type="number" name="adulto" id="idadulto" placeholder="Adultos">
+                <input type="number" name="adulto" id="idadulto" required placeholder="Adultos" >
             </div>
             <div>
-                <input  type="number" name="crianca" id="idcrianca" placeholder="Crianças">
+                <input  type="number" name="crianca" id="idcrianca" placeholder="Crianças" required >
             </div>
             <div>
-                <input type="number" name="tempo" id="idtempo" placeholder="Duração">
+                <input type="number" name="tempo" id="idtempo" required placeholder="Duração">
             </div>
 
             <div>
                 <input id="botao" class="calc" type="button" value="Calcular">
             </div>
+
+            
 
         </form>
 
@@ -82,6 +90,7 @@
             <span></span>
             <span></span>
             <span></span>
+            
         </div>
 
     </section>
