@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churrascômetro</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .secao-pai{
+
+
+            background-color: rgba(189, 234, 248, 0.527);
+            width: 450px;
+           
+            padding: 20px 20px;
+            
+
+            
+        }
+
+        h1{
+
+            padding: 0px 0px 20px 0px;
+        }
+
+        form{
+
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        form > div > input:not(.calc) {
+
+            padding: 3px;
+            width: 100%;
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="secao-pai">
+
+        <h1>Churrascômetro</h1>
+
+        <form action="teste.php" method="get">
+
+            <div>
+                <input type="number" name="adulto" id="idadulto" placeholder="Adultos">
+            </div>
+            <div>
+                <input  type="number" name="crianca" id="idcrianca" placeholder="Crianças">
+            </div>
+            <div>
+                <input type="number" name="tempo" id="idtempo" placeholder="Duração">
+            </div>
+
+            <div>
+                <input id="botao" class="calc" type="button" value="Calcular">
+            </div>
+
+        </form>
+
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </section>
+  <script src="churrascometro.js"></script>  
+</body>
+</html>
