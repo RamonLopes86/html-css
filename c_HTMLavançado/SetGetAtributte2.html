@@ -16,6 +16,8 @@
     </ul>
 
     <h1 data-nome="Ramon"></h1>
+
+    <h2 id="t2" data-valor="TESTE"></h2>
    
     
 
@@ -49,7 +51,14 @@
     let buscarValor = titulo.getAttribute("data-nome")
 
     titulo.innerHTML = titulo.dataset.nome
-    
+
+
+    let titulo2 = document.getElementById('t2')
+
+    t2.getAttribute('data-valor')
+
+    t2.innerHTML = t2.dataset.valor
+
   </script>  
 </body>
 </html>
