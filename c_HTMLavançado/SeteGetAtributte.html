@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATRIBUTOS</title>
+
+
+    <style>
+
+        #deslike{
+            position: absolute;
+            top: 0;
+            left:18px;
+            display: none;
+        }
+
+        #like{
+
+            display: block;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <!-- <img id="like" src="image/png-transparent-like-logo-facebook-like-button-facebook-like-button-computer-icons-like-miscellaneous-blue-text-thumbnail.png" alt="imagem like">
+
+    <img src="image/png-clipart-dislike-dislike-thumbnail.png" alt="imagem deslike" id="deslike"> -->
+
+
+     <h1 idade = "33"></h1> <!--declaração de um atributo inventado passando o valor 10-->
+  
+    
+
+ <script>
+
+    // let like = document.getElementById('like')
+    // let deslike = document.getElementById('deslike')
+
+    
+
+    // like.addEventListener('click' , mudarimagem2)
+    // deslike.addEventListener('click' , mudarNovamente)
+   
+    // function mudarimagem(){
+
+    //     like.src="image/png-clipart-dislike-dislike-thumbnail.png"
+    // }
+
+    /*podemos fazer mais simples pegando o atributo atraves do setAtribute*/
+
+
+        // function mudarimagem2(){
+
+        //    let res =  like.setAttribute('src' , "image/png-clipart-dislike-dislike-thumbnail.png")
+
+        //    return res
+
+        // }
+
+        let t = document.getElementsByTagName('h1')[0]
+    
+
+
+        // let valor = t.getAttribute('num') /*aqui ele vem como uma string*/
+        // t.innerHTML = valor 
+
+
+         t.setAttribute('nome' , 'Ramon') /*inserindo  um atributo*/
+
+        let valor = t.getAttribute('nome') /**/
+        
+        let novoValor = t.getAttribute('idade') /*peguei um atributo declarado inline no proprio h1*/
+
+        t.innerHTML = valor
+
+        document.write(novoValor) /*imprimir esse valor na pagina solto sem nenhuma tag só para mostrar mesmo */
+
+        
+
+      
+
+        
+        
+
+     
+
+            
+
+
+
+
+        
+         
+
+      
+
+
+
+        
+
+ 
+
+ </script>   
+</body>
+</html>

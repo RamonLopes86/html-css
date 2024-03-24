@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATRIBUTOS</title>
+
+    
+</head>
+<body>
+
+
+    <ul num="10"> <!--atriburto num = "10" que eu criei , ele nao existe-->
+
+
+    </ul>
+
+    <h1 data-nome="Ramon"></h1>
+   
+    
+
+  <script>
+
+    let lista = document.getElementsByTagName('ul')[0]
+
+    let num = parseInt(lista.getAttribute('num')) 
+
+    let conteudo = ""
+
+    for(let i = 1 ; i<=num ; i++){
+
+        
+        conteudo = conteudo +  "<li>" + i +  "</li>"
+
+    }
+
+
+    lista.innerHTML = conteudo
+
+    
+
+    /*para os atributos criados , é interessante utilizar ao inves de getAtributte para buscar esse elemento o dataset , veja : */
+
+
+    let  titulo = document.getElementsByTagName('h1')[0]
+
+    
+
+    let buscarValor = titulo.getAttribute("data-nome")
+
+    titulo.innerHTML = titulo.dataset.nome
+    
+  </script>  
+</body>
+</html>
