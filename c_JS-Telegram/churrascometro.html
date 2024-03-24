@@ -16,9 +16,10 @@
         body{
 
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: 20px;
         }
 
         .secao-pai{
@@ -45,7 +46,7 @@
             gap: 8px;
         }
 
-        form > div > input:not(.calc) {
+        form > div > input:not(.calc , #limpar) {
 
             padding: 3px;
             width: 100%;
@@ -56,6 +57,26 @@
 
             display: block;
             padding: 5px 0px;
+        }
+
+        .mesage{
+
+            width: 450px;
+            background-color: rgba(255, 0, 0, 0.849);
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            
+            
+        }
+
+        .mesage h1 {
+
+            padding: 10px 0px;
+            font-weight: bold;
         }
 
     </style>
@@ -80,6 +101,8 @@
 
             <div>
                 <input id="botao" class="calc" type="button" value="Calcular">
+
+                <input id="limpar" type="reset" value="Limpar">
             </div>
 
             
@@ -93,6 +116,14 @@
             
         </div>
 
+      
+
+    </section>
+
+    <section class="mesage" id="msg">
+        <div>
+            <h1>CAMPOS EM BRANCO</h1>
+        </div>
     </section>
   <script src="churrascometro.js"></script>  
 </body>
