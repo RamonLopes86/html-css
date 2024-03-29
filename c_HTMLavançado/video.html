@@ -4,11 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIDEO - HTML AVANÇADO</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        video{
+
+            width: 100%;
+            
+        }
+
+        .container{
+
+            width: 640px;
+            height: 360px;
+            position: relative;
+        }
+
+        .controle{
+
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content:center;
+            gap: 20px;
+           padding-bottom: 10px;
+           cursor: pointer;
+           opacity: 0;
+          
+        }
+
+
+        img{
+
+            width: 50px;
+            border-radius: 50%;
+          
+           
+        }
+
+      .controle:hover{
+
+        opacity: 1;
+        transition-property: all;
+        transition-duration: 500ms;
+      }
+
+        
+        
+            
+            
+
+
+    </style>
 </head>
 <body>
 
 
-        <video  src="video/1943483-hd_1280_720_25fps.mp4"></video>
+    <div class="container">
+
+            <video id="video1"  muted  src="video/1943483-hd_1280_720_25fps.mp4">
+
+            </video>
+
+          <div class="controle">
+                <img onclick="avancar()" src="image/1505182-forward-video-icon-vetor.jpg" alt="avançar">
+                <img id="comecar" onclick="play()" src="image/31OQNoCuVdL.png" alt="play">
+                <img onclick="retroceder()" src="image/transferir.png" alt="retroceder">
+                <img onclick="parar()" src="image/stop-video-icon-free-vector.jpg" alt="parar">
+          </div>  
+        </div>
     
+
+
+  <script>
+
+        /*como ja conheçemos o currentTime basta utilizalo para fazer os avanços e retrocessos que você desejar.*/
+
+        let video = document.getElementById('video1')
+        let comecar = document.getElementById('comecar')
+
+        
+
+        function avancar(){
+
+            video.currentTime = video.currentTime + 2
+
+        }
+
+        function play(){
+
+           if(video.paused){
+
+                video.play()
+           } else{
+
+                video.pause()
+           }
+            
+            
+        }
+
+
+        function retroceder(){
+
+            video.currentTime = video.currentTime - 2
+
+        }
+
+        function parar(){
+
+            video.pause()
+            video.currentTime = 0 // currentTime = hora atual
+            
+        }
+
+
+
+  </script>      
 </body>
 </html>
