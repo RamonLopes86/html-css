@@ -81,6 +81,7 @@
                 <img id="comecar" onclick="play()" src="image/31OQNoCuVdL.png" alt="play">
                 <img onclick="retroceder()" src="image/transferir.png" alt="retroceder">
                 <img onclick="parar()" src="image/stop-video-icon-free-vector.jpg" alt="parar">
+                <img onclick="acelerar()" src="image/transferir.png" alt="">
           </div>  
         </div>
     
@@ -127,6 +128,13 @@
             video.currentTime = 0 // currentTime = hora atual
             
         }
+
+        function acelerar(){
+
+           video.playbackRate = video.playbackRate - 0.1
+        }
+
+
 
 
 
