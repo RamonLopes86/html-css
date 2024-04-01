@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+     
+    <script>
+
+        // formas de escrevcer uma função : 
+
+        
+        let x = 2 
+        function dobro(x){
+
+            document.write(2 * x + "<br>") 
+        }
+
+        dobro(x)
+        
+        // outra maneira de criar uma função ( função anônima): 
+        
+        let z = 80
+
+        let triplo = function(z){
+
+           return(5 * z) + "<br>"
+        }
+
+        document.write(triplo(z))
+
+
+        // Arrow Function
+
+        let w = 7
+        let quadruplo = (w) => {
+
+            document.write(w * 4 + "<br>")  
+
+        }
+
+        quadruplo(w) 
+
+
+        // uma forma de passar função como metodo
+    
+        function calc(){
+
+               return this.x * 2 
+        }
+
+        let num = {
+
+            x: 15,
+            d:calc
+            
+
+        }
+
+        document.write(num.d())
+
+
+
+      
+
+
+
+
+
+    </script>
+</body>
+</html>
