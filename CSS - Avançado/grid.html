@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID</title>
+
+    <style>
+        *{
+            margin:0 ;
+            padding: 0;
+            box-sizing: border-box;
+            list-style-type: none;
+        }
+        header{
+
+            background-color: rgba(255, 0, 0, 0.356);
+            text-align: center;
+            padding: 10px 0px;
+        }
+
+        main{
+
+            display: grid;
+            grid-template-columns: 200px auto;
+           
+        }
+
+        nav{
+
+            background-color: blue;
+            /* height: 100vh; */
+            
+        }
+
+        article{
+
+            background-color: green;
+           
+            
+           
+        }
+
+        ul{
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-left: 20px;
+            justify-content: center;
+        }
+
+        section h1 {
+
+          width: calc(100% - 20px);
+          margin: 0px 10px;
+           
+        }
+
+        section{
+
+            width: 100%;
+        }
+
+      
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cabeçalho</h1>
+    </header>
+
+    <main>
+
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Contatos</li>
+                <li>Endereço</li>
+            </ul>
+        </nav>
+        <section>
+           <article>
+                <h1 style="text-align: justify; ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cupiditate soluta minus, autem deleniti ad at! Inventore hic dolore totam perspiciatis recusandae aliquid temporibus sint, nulla, laboriosam vero distinctio eum.</h1>
+           </article>
+        </section>
+    </main>
+    
+</body>
+</html>
