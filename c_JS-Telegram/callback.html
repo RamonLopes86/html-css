@@ -36,12 +36,42 @@
 
 
 
-            saudacao("Ramon" , msg )
+            // saudacao("Ramon" , msg )
           
 
+        // outro exemplo para demonstrar callBack
         
+        let x = 5
+        let y = 50
 
-          
+        function res(num){
+
+            document.write("o resultado é " + num)
+
+        }
+
+        function soma( x , y , call ){
+
+            valor = x+y
+            document.write(x+y)
+            call(valor)
+
+        }
+
+        function multiplicar( x , y , call2 ){
+
+            valor = x*y
+            document.write("<br>")
+           document.write(valor) 
+           call2(valor)
+
+        }
+
+
+        soma(x, y , res)
+        multiplicar( x, y , res)
+
+       
            
 
 
