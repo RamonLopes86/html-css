@@ -10,24 +10,44 @@
     <script>
 
             // callBack
+            // em resumo é voce passar como parametro de uma função uma outra função 
 
-            
+            //pesquisar mais sobre
+          
 
-            function tarefa(){
+            function msg(){
 
-                return("Fazer Comida")
+                document.write("bem vindo")
+                document.write("<br>")
             }
 
-            
-            function imprimir(mensagem , f){
+           
 
-               
-                document.write("meu nome é " + nome);
-                f();
+            function saudacao(nome , call , dall){
 
-            }
-            
-            document.write("Ramon" , tarefa())
+                    document.write("ola " + nome);
+                    document.write("<br>")
+
+                    call()
+                    
+                   
+
+            } 
+
+
+
+            saudacao("Ramon" , msg )
+          
+
+        
+
+          
+           
+
+
+          
+         
+          
 
     </script>
 </body>
