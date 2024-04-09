@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJETO FORMULÁRO 2 </title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        label{
+
+            display: block;
+            padding: 8px 0px
+        }
+
+        form{
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+           
+        }
+
+        header{
+
+            background-color: rgb(143, 3, 3);
+
+        }
+        header h3 {
+
+            padding: 10px 10px;
+            color: white;
+            font-weight: normal;
+
+        }
+
+        main{
+
+            height: 100vh;
+            
+            
+        }
+
+        main h1 {
+
+            color: rgb(143, 3, 3) ;
+            padding-bottom: 20px;
+            text-indent: 0;
+        }
+
+        main p {
+
+            padding-bottom: 20px;
+            max-width: 4100%;
+            text-align: justify;
+            line-height: 30px;
+            font-size: 1.05rem;
+            text-indent: 0;
+
+            
+        }
+
+        .pai {
+
+           max-width: 450px;
+           margin: 40px auto;
+           
+        }
+         
+
+           
+          
+      
+
+        input , label , p , h1{
+
+            width: calc(100% - 20px);
+            padding: 6px 0px;
+            text-indent: 5px;
+            margin: 0px 10px;
+            
+            
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <h3>Faculdade</h3>
+    </header>
+    <main>
+        <div class="pai">
+
+            <h1>Matricula</h1>
+
+            <p>Prrencha os campos abaixo para criar a sua matricula e seu cadastro no ambiente virtual da Faculdade</p>
+
+            <form action="" method="get" autocomplete="off">
+
+                <div class="box-pai">
+                    <label  for="idnome">Nome :</label>
+                    <input type="text" name="Nome" id="idnome">
+                </div>
+                <div class="box-pai">
+                    <label for="iddata">Data de Nascimento :</label>
+                    <input type="date" name="Data" id="iddata">
+
+                </div>
+
+                <div class="box-pai">
+                    <label for="idtel">Telefone :</label>
+                    <input type="tel" name="tel" id="idtel">
+                </div>
+
+                <div class="box-pai">
+                    <label for="idmail">E-mail</label>
+                    <input type="email" name="mail" id="idmail">
+                </div>
+
+                <div class="box-pai">
+                    <label for="idnum">Melhor dia para vencimento : </label>
+                    <input type="number" name="num" id="idnum">
+                </div>
+
+                <div class="box-pai">
+                    <label for="idlogin">Login : </label>
+                    <input type="text" name="login" id="idlogin">
+                </div>
+                <div class="box-pai">
+                    <label for="idsenha">Senha :</label>
+                    <input type="password" name="Senha" id="idsenha">
+                </div>
+
+            </form>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULÁRIOS</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive, sans-serif;
+        }
+
+        body {
+
+            background-color: gray;
+        }
+
+        div {
+
+            background-color: black;
+            flex-basis: 600px;
+            margin: 0px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px 0px;
+            border-radius: 5px;
+            color: white;
+           
+
+
+
+        }
+
+        div h1 {
+
+            color: blue;
+
+        }
+
+
+        div p {
+
+            line-height: 27px;
+            text-align: left;
+            width: 85%;
+
+
+
+
+        }
+
+        main {
+
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input {
+            display: block;
+            background-color: blue;
+            color: white;
+            padding: 8px;
+            border: none;
+            width: calc(100% - 60px);
+            margin: 10px 30px;
+            border-radius: 5px;
+            font-size: 18px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.788);
+        }
+
+
+
+
+
+        textarea {
+
+            width: calc(100% - 60px);
+            margin: 0px 20px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.788);
+            position: relative;
+            padding: 10px;
+            
+            
+            
+        }
+            
+            
+
+       label{
+
+        display: block;
+        width: 80%;
+        padding: 10px;
+        text-align: left;
+        position: relative;
+        left: 20px;
+        
+    }
+
+        
+        
+     
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+
+        <div>
+            <h1>CAIXA DE SUGESTÕES</h1>
+            <p>Escreva na caixa de texto abaixo o que podemos fazer para melhorar o espaco CyberExpress.Deixe seu
+                elogio, critica ou sugestão abaixo e envie para gente.</p>
+
+            <form action="https://www.devmedia.com.br/codigos/formularios/aula2/">
+
+
+                <section >
+
+                    <label for="idsugestoes">Caixa de Sugestões :</label>
+
+                    <textarea name="sugestoes" id="idsugestoes" cols="65" rows="10"></textarea>
+                </section>
+
+
+                <input type="submit" value="Enviar sugestão">
+            </form>
+        </div>
+
+    </main>
+
+
+
+</body>
+
+</html>
