@@ -11,12 +11,15 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            
         }
 
         label{
 
             display: block;
-            padding: 8px 0px
+            padding: 8px 0px;
+            
+            
         }
 
         form{
@@ -40,12 +43,6 @@
 
         }
 
-        main{
-
-            height: 100vh;
-            
-            
-        }
 
         main h1 {
 
@@ -57,28 +54,29 @@
         main p {
 
             padding-bottom: 20px;
-            max-width: 4100%;
+            max-width: 100%;
             text-align: justify;
             line-height: 30px;
             font-size: 1.05rem;
             text-indent: 0;
 
-            
         }
+            
 
         .pai {
 
            max-width: 450px;
            margin: 40px auto;
-           
+           border: 2px solid rgb(138, 4, 4);
+           padding: 20px 10px; 
         }
+          
+           
+           
+           
          
 
-           
-          
-      
-
-        input , label , p , h1{
+        input , label , p , h1 , fieldset{
 
             width: calc(100% - 20px);
             padding: 6px 0px;
@@ -88,6 +86,67 @@
             
         }
 
+
+        .box-pai #send {
+
+            background-color: rgb(131, 5, 5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .box-pai #send:hover{
+
+            background-color: rgb(102, 18, 18);
+            transition-property: all;
+            transition-duration: 220ms;
+        }
+
+       
+        .check > fieldset {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+            
+        }
+
+        .check > fieldset > div  input{
+
+            position: relative;
+            top: 2px;
+            right: 10px;
+        }
+       
+
+        .check legend {
+
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 0px 2px;
+            position: relative;
+            right: 2px;
+        }
+      
+        footer{
+
+            background-color: rgba(128, 128, 128, 0.144);
+            padding: 20px 0px;
+            text-align: center;
+            position: relative;
+            top: 33px;
+        }
+
+
+        footer span {
+
+            font-weight:bold;
+            font-size: 1.1rem;
+        }
+            
+            
         
 
     </style>
@@ -139,8 +198,44 @@
                     <input type="password" name="Senha" id="idsenha">
                 </div>
 
+                <div class="box-pai check">
+
+                    <fieldset>
+                        <legend>Esporte</legend>
+                        <div>
+                            <label for="idfutebol">Futebol</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="esporte" id="idfutebol">
+                        </div>
+
+                        <div><label for="idvolei">Volei</label></div>
+                        <div><input type="checkbox" name="esporte" id="idvolei">
+                        </div>
+                    </fieldset>
+                    
+                </div>
+
+            
+
+                <div class="box-pai">
+                    <input id="send" type="submit" value="Enviar Matricula">
+                </div>
+
+               
+
             </form>
         </div>
+
+        
     </main>
+
+
+    <footer>
+        <span>Copyright - 2024 Faculdade</span>
+    </footer>
+    
+
 </body>
+
 </html>
