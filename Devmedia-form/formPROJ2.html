@@ -104,7 +104,7 @@
         }
 
        
-        .check > fieldset {
+        /*.check >*/ fieldset {
 
             display: flex;
             flex-direction: row;
@@ -121,7 +121,7 @@
         }
        
 
-        .check legend {
+        /*.check*/ legend {
 
             font-weight: bold;
             font-size: 1.1rem;
@@ -147,8 +147,42 @@
         }
             
             
-        
+        .radio-filho{
 
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .selecao , .selecao-grupo , .selecao-lisa{
+           
+            justify-content: center;
+            width: calc(100% - 20px);
+            margin: 0px 10px;
+        }
+
+        select{
+
+            width: 100%;
+            text-align: center;
+            padding: 5px;
+            box-sizing: border-box;
+            background-color: rgba(128, 128, 128, 0.301);
+            border: none;
+            
+            
+        }
+
+        .selecao-grupo #idjogos {
+
+            text-align: left;
+        }
+
+        .selecao-grupo #idjogos > optgroup option {
+
+            text-align: left;
+        }
+    
     </style>
 </head>
 <body>
@@ -206,14 +240,95 @@
                             <label for="idfutebol">Futebol</label>
                         </div>
                         <div>
-                            <input type="checkbox" name="esporte" id="idfutebol">
+                            <input type="checkbox" name="futebol" id="idfutebol" checked>
                         </div>
 
-                        <div><label for="idvolei">Volei</label></div>
-                        <div><input type="checkbox" name="esporte" id="idvolei">
+                        <div>
+                            <label for="idvolei">Volei</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="volei" id="idvolei">
+                        </div>
+
+                        <div>
+                            <label for="idnada">Nenhum</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="nada" id="idnada">
                         </div>
                     </fieldset>
+
+                   
                     
+                </div>
+
+                <div class="radio-pai" >
+                    
+                    <fieldset style="display: flex; flex-direction: column;         align-items: flex-start;">
+
+                        <legend>Animais</legend>
+
+                        <div class="radio-filho">
+                            <label for="idsim">Sim</label>
+                            <input type="radio" name="animal" id="idsim" value="sim" checked>
+                        </div>
+                        
+                        <div class="radio-filho">
+                            <label for="idnao">Não</label>
+                            <input type="radio" name="animal" id="idnao" value="nao">
+                        </div>
+                        
+                    </fieldset>
+                           
+                        
+                </div>
+
+                <div class="selecao">
+
+                    <select name="regiao" id="idregiao" required>
+
+                        <option selected value="">-- selecione sua região --</option>
+                        <option value="NO">norte</option>
+                        <option value="S">Sul</option>
+                        <option value="Su">Sudeste</option>
+                        <option value="N">Nordeste</option>
+
+
+                    </select>
+                    
+
+                </div>
+
+                <div class="selecao-grupo">
+                    <select name="jogos" id="idjogos">
+
+                        <optgroup  label="PS5">
+                            <option value="COD">Cal od duty</option>
+                            <option value="pES">Fotebol</option>
+                            <option value="Fort">Fortnite</option>
+                            
+                        </optgroup>
+
+                        <optgroup  label="Xbox">
+                            <option value="BF">BF3</option>
+                            <option value="AC">Assassin Cred</option>
+                        </optgroup>
+
+
+                    </select>
+
+                </div>
+
+                <div class="selecao-lisa">
+                    <legend style="padding: 4px 0px;">Linguagens :</legend>
+                    <select name="lista-lisa" id="idlistalisa" multiple  style="text-align: left;">
+                       <option value="">c++</option>
+                       <option value="">JS</option>
+                       <option value="">CSS</option>
+                       <option value="">HTML</option>
+                       
+
+                    </select>
                 </div>
 
             
@@ -222,10 +337,12 @@
                     <input id="send" type="submit" value="Enviar Matricula">
                 </div>
 
+            </form>
+        
+        </div>
+
                
 
-            </form>
-        </div>
 
         
     </main>
