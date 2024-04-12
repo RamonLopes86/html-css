@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Alucar.css">
+    <title>Projeto ALUCAR</title>
+</head>
+<body>
+    <header>
+        <h1>Alu Car</h1>
+    </header> 
+    <main>
+        <section class="image-fundo" id="idimg-fundo">
+           <p>AluCar <br> Aluguel de Carros</p>
+           
+
+        </section>
+        <section class="nos">
+            <h2>Sobre nós</h2>
+            <p>Há 45 anos atuando na area de locação de veiculos com segurança e garantia de satisfação.temos os melhores preços e modelos do mercado</p>
+
+            <div class="carpai">
+                <div class="img-car">
+                    <img src="image/23-08-2023-PORTADA-Nissan-Kicks-2025-1-min.jpg" alt="carro1">
+                </div>
+                <div class="img-car">
+                    <img src="image/2be41bd3-chery-tiggo-5x-modelo-2018-branco-de-frente-estatico-no-asfalto.jpg" alt="carro2">
+                </div>
+                <div class="img-car">
+                    <img src="image/2be41bd3-chery-tiggo-5x-modelo-2018-branco-de-frente-estatico-no-asfalto.jpg" alt="carro3">
+                </div>
+
+             
+            </div>
+            <div class="lista" style="display: block;">
+                <ul>
+                    <li>O compromisso da AliCar é com qualidade</li>
+                    <li>Os melhores carros estão aqui</li>
+                    <li>Assistência 24hs</li>
+                </ul>
+            </div>
+        </section>
+        <section class="contato">
+            <h2>contato</h2>
+        </section>
+        <section class="formulario">
+
+            <h2>Analise de cadastro</h2>
+            <p>Preencha os campos abaixo e analisaremos seus dados.</p>
+            <p>Se tudo estiver correto ligaremos para marcar uma visita sua à loja</p>
+
+            <form action="">
+
+                <fieldset class="dados">
+                    <legend>Dados Pessoais</legend>
+                    <div>
+                        <label for="idnome">Nome:</label>
+                        <input type="text" name="nome" id="idnome">
+                    </div>
+                    <div>
+                        <label for="idnascimento">Nascimento</label>
+                        <input type="date" name="nascimento" id="idnascimento">
+                    </div>
+
+                    <div>
+                        <label for="idtel">Telefone</label>
+                        <input type="tel" name="tel" id="idtel">
+                    </div>
+
+                </fieldset>
+
+                <fieldset class="cnh">
+                    <legend>CNH</legend>
+                    <div>
+                        <label for="idnum">Numero de Registro</label>
+                        <input type="number" name="numero" id="idnum">
+                    </div>
+                    <div>
+                        <label for="idval">Validade</label>
+                        <input type="date" name="validade" id="idval">
+                    </div>
+
+                </fieldset>
+
+                <fieldset class="car">
+                    <label for="idmodelo">Modelo do Carro</label>
+                    <input type="text" name="modelo" id="idmodelo">
+                </fieldset>
+
+                <div>
+                    <input type="submit" value="Enviar Dados">
+                </div>
+
+            </form>
+
+        </section>
+    </main>
+</body>
+</html>

@@ -14,6 +14,37 @@
             
         }
 
+        header{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .cnoite{
+
+            display: flex;
+            flex-direction: row;
+            margin: 0px 10px;
+            
+        }
+
+        header .cnoite div {
+
+            display: flex;
+            flex-direction: row;
+            color: white;
+            font-size: 13px;
+            
+            
+        }
+
+        #iddia,#idnoite{
+
+            position: relative;
+            right: 10px;
+        }
+
         label{
 
             display: block;
@@ -35,6 +66,8 @@
             background-color: rgb(143, 3, 3);
 
         }
+
+
         header h3 {
 
             padding: 10px 10px;
@@ -69,6 +102,7 @@
            margin: 40px auto;
            border: 2px solid rgb(138, 4, 4);
            padding: 20px 10px; 
+           
         }
           
            
@@ -167,8 +201,9 @@
             text-align: center;
             padding: 5px;
             box-sizing: border-box;
-            background-color: rgba(128, 128, 128, 0.301);
+            background-color: rgb(240, 240, 240);
             border: none;
+            color:rgb(92, 92, 92) /*<<<<<<*/
             
             
         }
@@ -188,9 +223,22 @@
 <body>
     <header>
         <h3>Faculdade</h3>
+
+        <form action="" id="noite">
+            <section class="cnoite">
+                <div>
+                    <label for="iddia">DIA</label>
+                    <input type="radio" name="modo" id="iddia" checked>
+                </div>
+                <div>
+                    <label for="idnoite">NOITE</label>
+                    <input type="radio" name="modo" id="idnoite">
+                </div>
+            </section>
+        </form>
     </header>
     <main>
-        <div class="pai">
+        <div class="pai" id="idpai">
 
             <h1>Matricula</h1>
 
@@ -352,7 +400,45 @@
         <span>Copyright - 2024 Faculdade</span>
     </footer>
     
+<script>
 
+
+    let dia = document.getElementById('iddia')
+    let noite = document.getElementById('idnoite')
+    let corpo = document.getElementById('idpai')
+
+    
+    noite.addEventListener('click' , mudarCor)
+    dia.addEventListener('click', mudarCor)
+
+
+    function mudarCor(){
+
+        if(noite.checked){
+
+            document.body.style.backgroundColor="gray"
+            corpo.style.backgroundColor="rgb(92, 92, 92)"
+            corpo.style.color="white"
+            corpo.style.webkitTransitionProperty="all"
+            corpo.style.transitionDuration="800ms"
+            document.body.style.transitionDuration="800ms"
+            corpo.style.border="none"
+           
+        }else if (dia.checked){
+            document.body.style.backgroundColor="white"
+            corpo.style.backgroundColor="white"
+            corpo.style.color="black"
+            corpo.style.webkitTransitionProperty="backgroundColor"
+            corpo.style.transitionDuration="800ms"
+            document.body.style.transitionDuration="800ms"
+            corpo.style.border="2px solid #8F0303"
+            
+            
+        }
+
+    }
+
+</script>
 </body>
 
 </html>
