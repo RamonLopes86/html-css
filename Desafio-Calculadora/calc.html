@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main{
+            
+            background-image: linear-gradient(to left , yellow , orange);
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calculadora{
+
+            border: none;
+            padding: 20px;
+            background-color: gray;
+            border-radius: 5px;
+            
+            
+        }
+          
+
+        
+
+        table tr td button{
+
+            width: 60px;
+            height: 50px;
+            border: none;
+            border-radius: 5px;
+            margin: 4px;
+            font-weight: bold;
+            background-color: black;
+            color: white;
+            box-shadow: 0px 3px rgba(255, 255, 255, 0.582);
+            font-size: 1.5rem;
+        }
+
+        table tr td button:active{
+
+            transform: translateY(0.5px);
+            box-shadow: 0px 1.8px rgba(255, 255, 255, 0.582);
+            
+
+        }
+            
+            
+            
+
+        div{
+
+            width: 100%;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.89);
+            border-radius: 5px;
+            margin: 5px 0px;
+            text-align: right;
+            line-height: 50px;
+            padding-right: 5px;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <main>
+
+
+        <section class="calculadora">
+
+            <table>
+                <div></div>
+                <tr>
+                    <td><button>C</button></td>
+                    <td><button onclick="limpar()">CE</button></td>
+                    <td><button onclick="sinais('/')">/</button></td>
+                    <td><button onclick="sinais('x')">X</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="numeros(7)">7</button></td>
+                    <td><button onclick="numeros(8)">8</button></td>
+                    <td><button onclick="numeros(9)">9</button></td>
+                    <td><button onclick="sinais('-')">-</button></td>
+                </tr>
+
+                <tr>
+                    <td><button onclick="numeros(4)">4</button></td>
+                    <td><button onclick="numeros(5)">5</button></td>
+                    <td><button onclick="numeros(6)">6</button></td>
+                    <td><button onclick="sinais('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="numeros(1)">1</button></td>
+                    <td><button onclick="numeros(2)">2</button></td>
+                    <td><button onclick="numeros(3)">3</button></td>
+                    <td rowspan="2"><button style="height:105px;">=</button></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><button style="width:98%;">0</button></td>
+                    <td><button onclick="ponto('.')">.</button></td>
+                </tr>
+                    
+            </table>
+
+        </section>
+
+    </main>
+   <script>
+
+    let tela = document.getElementsByTagName('div')[0]
+
+     function numeros(x){
+
+        let acrescentar = tela.innerHTML;
+        tela.innerHTML = acrescentar + x
+
+     }   
+
+     function limpar(){
+
+        tela.innerHTML=""
+     }
+
+     function sinais(z){
+        let Asinais = tela.innerHTML;
+        tela.innerHTML = Asinais + z
+     }
+
+     function ponto(w){
+        let aponto = tela.innerHTML;
+        tela.innerHTML= aponto + "."
+     }
+
+
+   </script> 
+</body>
+</html>
