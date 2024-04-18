@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDUCE</title>
+</head>
+<body>
+
+
+    
+    <script>
+
+        // trabalhando com reduce
+
+        let alunos = [
+
+            {nome:"Ramon" , idade:25},
+
+            {nome:"Carina" , idade:30},
+
+
+        ]
+
+
+        let alunos2 = [
+
+        {nome:"Ramon" , idade:15},
+
+        {nome:"Carina" , idade:10},
+
+
+        ]
+
+
+            
+        function MediaIdade(total , alunos){
+
+
+            return total + alunos.idade
+        }
+
+
+        let res = alunos.reduce( MediaIdade , 0)
+        let res2 = alunos2.reduce( MediaIdade , 0)
+
+       
+        let media = res / alunos.length
+
+        let media2 = res2/alunos2.length
+
+        
+
+
+        console.log("a media de idade dos alunos é " + media)
+        console.log("a media de idade dos alunos2 é " + media2)
+
+
+
+
+
+        // trabalhando com filter :
+
+
+        function filtrar(t){
+
+            return t.idade > 25
+
+        }
+
+
+        let filtro = alunos.filter(filtrar)
+
+        console.log(filtro)
+
+       
+        // trabalhando com o map 
+
+        function mapear(m){
+
+            return m.nome + " acrescentou " + m.idade + " teste"
+
+        }
+
+        let mapRes = alunos.map(mapear)
+
+        console.log(mapRes)
+
+
+       
+        
+
+
+    </script>
+    
+</body>
+</html>
