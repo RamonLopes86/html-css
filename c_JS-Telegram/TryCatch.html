@@ -19,18 +19,25 @@
 
         // try catch - try significa tentar , ou seja eu vou tentar algom se eu nao conseguir ele vai tratar de alguma maneira , e  o meu cogigo prossgue normalmente , nao interrompendo por conta do erro.
 
+        // vamos mostrar o thow que nada mais é que a exceção
+
         // ex :
 
         let p = document.getElementsByTagName('p')[0]
         let div = document.getElementsByTagName('div')[0]
 
 
-        
-       let y = 2
+       let x = 1
+       let y = 5
+
+       if(x =="" || y == ""){
+
+        throw p.innerHTML = "defina um valor para x ou y" // aqui é a utilização do throw fora do try , utilizamos quando ao inves de dar logo o erro do catch abrimos uma exceção e informamos ao usuário o que esta pendente para ele concluir e assim interrompemos todo o resto do codigo ate o throw ser ajustado.
+        }
       
         try{
 
-            p.innerHTML = x/y
+            p.innerHTML = "resultado : " + x/y
 
         }catch(erro){
 
