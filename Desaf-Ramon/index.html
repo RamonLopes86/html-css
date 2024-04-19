@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARDS</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+
+            background-image: linear-gradient(to left , rgba(255, 255, 0, 0.788) ,  rgba(255, 0, 0, 0.555) 80%);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+           
+        }
+
+        main{
+
+            width: 100%;
+            position: relative;
+           
+           
+        }
+
+        main section {
+
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 5px;
+            position: absolute;
+            top: -80px;
+            
+            
+
+        }
+
+        main .cardFundo{
+
+            width: 300px;
+            height: 200px;
+            background-color: white;
+            
+           
+            
+        }
+            
+
+        main .cardFrente1{
+
+            width: 300px;
+            height: 200px;
+            background-image: url(image/21105542136038.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            cursor: pointer;
+            
+        }
+            
+            
+
+        main .cardFrente2{
+
+        width: 300px;
+        height: 200px;
+        background-image: url(image/i533291.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+        
+        }
+
+        main .cardFrente3{
+
+        width: 300px;
+        height: 200px;
+        background-image: url(image/i558851.jpeg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+        
+        }
+
+
+       
+
+        .moverCima{
+
+            transform: translateY(-200px);
+            transition-property: all;
+            transition-duration: 2s;
+            
+        }
+
+
+        .moverBaixo{
+
+            transform: translateY(0px);
+            transition-property: all;
+            transition-duration: 2s;
+
+        }
+      
+
+    </style>
+</head>
+<body>
+    
+    <main>
+      
+        <section class="fundo">
+            <div class="cardFundo" id="fundo1">
+                <p style="text-align: center;">
+                    Ola eu sou o FaceBook
+                </p>
+            </div>
+            <div class="cardFundo"></div>
+            <div class="cardFundo"></div>
+        </section>
+
+        <section  class="frente">
+
+            <div onmouseover="mover()"   id="frente1" class="cardFrente1"></div>
+            <div class="cardFrente2"></div>
+            <div class="cardFrente3"></div>
+           
+        </section>
+    </main>  
+
+
+<script>
+    let fundoUm = document.getElementById('fundo1')
+    let frenteUm = document.getElementById('frente1')
+
+
+
+    function mover(){
+
+        
+
+        frenteUm.classList.toggle("moverCima")
+
+       
+        
+    }
+
+
+    function sair(){
+
+        frenteUm.classList.toggle('moverBaixo')
+
+    }
+
+
+    
+
+   
+
+        
+
+
+
+</script>
+</body>
+</html>
