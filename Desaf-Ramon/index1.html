@@ -1,67 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOVA TENTATIVA</title>
 
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-       
 
-        .box-pai{
 
-            width: calc(100% - 22px);
+
+        .box-pai {
+
+
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            margin: 0px 10px;
-            gap: 10px;
-           flex-wrap: wrap;
-           
-           
-            
-            
-            
-            
+            gap: 20px;
+
+
         }
 
-        .pai1, .pai2, .pai3{
+
+
+
+
+        .pai1,
+        .pai2,
+        .pai3 {
 
             position: relative;
-            
-
 
         }
 
-       
-        
-        .filho1 , .filho2, .filho3 , .fundo1 , .fundo2 , .fundo3{
-        
+
+
+
+
+
+
+
+        .filho1,
+        .filho2,
+        .filho3,
+        .fundo1,
+        .fundo2,
+        .fundo3 {
+
             width: 300px;
             height: 200px;
             border-radius: 10px 10px 0px 0px;
 
         }
-           
-            
-        .filho1 , .filho2, .filho3 {
+
+
+        .filho1,
+        .filho2,
+        .filho3 {
 
             background-color: red;
             position: absolute;
-            
-            
+
+
         }
-            
-           
-        .filho1{
+
+
+        .filho1 {
 
             background-image: url(image/21105542136038.jpg);
             background-position: center center;
@@ -70,7 +82,7 @@
         }
 
 
-        .filho2{
+        .filho2 {
 
             background-image: url(image/i533291.jpg);
             background-position: center center;
@@ -79,7 +91,7 @@
 
         }
 
-        .filho3{
+        .filho3 {
 
             background-image: url(image/i558851.jpeg);
             background-position: center center;
@@ -90,14 +102,83 @@
 
 
 
-        .fundo1 , .fundo2 , .fundo3{
+        .fundo1 {
 
             background-color: blue;
         }
 
-     
+        .fundo2 {
+
+            background-color: #FF1616;
+        }
+
+        .fundo3 {
+            background-color: #C02592;
+        }
+
+
+        @media screen and (max-width:954px) {
+
+
+            .filho1,
+            .filho2,
+            .filho3,
+            .fundo1,
+            .fundo2,
+            .fundo3 {
+
+                width: 250px;
+                transition: all 800ms;
+
+
+            }
+
+
+
+
+        }
+
+        @media screen and (max-width:795px) {
+
+
+            .filho1,
+            .filho2,
+            .filho3,
+            .fundo1,
+            .fundo2,
+            .fundo3 {
+
+                width: 200px;
+                transition: all 200ms;
+
+
+            }
+
+
+
+
+
+        }
+
+
+        @media screen and (max-width:659px) {
+
+
+            .box-pai {
+
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+
+
+            }
+
+
+        }
     </style>
 </head>
+
 <body>
 
 
@@ -112,16 +193,16 @@
             </section>
 
             <section class="pai2">
-                <div class="filho2"></div>
-                <div class="fundo2"></div>
+                <div id="frente2" class="filho2"></div>
+                <div id="fundo2" class="fundo2"></div>
             </section>
 
-            
+
             <section class="pai3">
-                <div class="filho3"></div>
-                <div class="fundo3"></div>
+                <div id="frente3" class="filho3"></div>
+                <div id="fundo3" class="fundo3"></div>
             </section>
-            
+
 
 
 
@@ -130,53 +211,151 @@
 
     </main>
 
-<script>
+    <script>
 
-    let frenteUm = document.getElementById('frente1')
-    let fundoUm = document.getElementById('fundo1')
+        let frenteUm = document.getElementById('frente1')
+        let frenteDois = document.getElementById('frente2')
+        let frenteTres = document.getElementById('frente3')
 
-
-    frenteUm.addEventListener('mouseover', mover)
-
-    fundoUm.addEventListener('mouseout' , voltar)
-
-    function mover(){
-
-        frenteUm.style.transitionProperty="all"
-        frenteUm.style.transitionDuration="1s"
-        frenteUm.style.transform="translateY(-200px)"
-
-       
-        
-        fundoUm.style.borderRadius="0px 0px 0px 0px"
-        fundoUm.style.transitionProperty="all"
-        fundoUm.style.transitionDelay="800ms"
-        
-
-    }
+        let fundoUm = document.getElementById('fundo1')
+        let fundoDois = document.getElementById('fundo2')
+        let fundoTres = document.getElementById('fundo3')
 
 
-    
 
-    function voltar(){
+        frenteUm.addEventListener('mouseover', moverface)
+        fundoUm.addEventListener('mouseout', voltarface)
 
-        frenteUm.style.transitionProperty="all"
-        frenteUm.style.transitionDuration="1s"
-        frenteUm.style.transform="translateY(0px)" 
+        frenteDois.addEventListener('mouseover', moveryt)
+        fundoDois.addEventListener('mouseout', voltaryt)
 
-       
-
-        fundoUm.style.borderRadius="10px 10px 0px 0px"
-        fundoUm.style.transitionProperty="all"
-        fundoUm.style.transitionDelay="800ms"
-
-    }
+        frenteTres.addEventListener('mouseover', moverinsta)
+        fundoTres.addEventListener('mouseout', voltarinsta)
 
 
-   
-    
+
+        function moverface() {
 
 
-</script>
+
+            frenteUm.style.transitionProperty = "all"
+            frenteUm.style.transitionDuration = "1s"
+            frenteUm.style.transform = "translateY(-200px)"
+
+
+
+            fundoUm.style.borderRadius = "0px 0px 0px 0px"
+            fundoUm.style.transitionProperty = "all"
+            fundoUm.style.transitionDelay = "800ms"
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        function voltarface() {
+
+            frenteUm.style.transitionProperty = "all"
+            frenteUm.style.transitionDuration = "1s"
+            frenteUm.style.transform = "translateY(0px)"
+
+
+
+            fundoUm.style.borderRadius = "10px 10px 0px 0px"
+            fundoUm.style.transitionProperty = "all"
+            fundoUm.style.transitionDelay = "800ms"
+
+        }
+
+
+
+        function moveryt() {
+
+            frenteDois.style.transitionProperty = "all"
+            frenteDois.style.transitionDuration = "1s"
+            frenteDois.style.transform = "translateY(-200px)"
+
+
+
+            fundoDois.style.borderRadius = "0px 0px 0px 0px"
+            fundoDois.style.transitionProperty = "all"
+            fundoDois.style.transitionDelay = "800ms"
+
+
+
+
+        }
+
+
+
+        function voltaryt() {
+
+            frenteDois.style.transitionProperty = "all"
+            frenteDois.style.transitionDuration = "1s"
+            frenteDois.style.transform = "translateY(0px)"
+
+
+
+            fundoDois.style.borderRadius = "10px 10px 0px 0px"
+            fundoDois.style.transitionProperty = "all"
+            fundoDois.style.transitionDelay = "800ms"
+
+        }
+
+
+        function moverinsta() {
+
+            frenteTres.style.transitionProperty = "all"
+            frenteTres.style.transitionDuration = "1s"
+            frenteTres.style.transform = "translateY(-200px)"
+
+
+
+            fundoTres.style.borderRadius = "0px 0px 0px 0px"
+            fundoTres.style.transitionProperty = "all"
+            fundoTres.style.transitionDelay = "800ms"
+
+
+
+
+        }
+
+
+
+        function voltarinsta() {
+
+            frenteTres.style.transitionProperty = "all"
+            frenteTres.style.transitionDuration = "1s"
+            frenteTres.style.transform = "translateY(0px)"
+
+
+
+            fundoTres.style.borderRadius = "10px 10px 0px 0px"
+            fundoTres.style.transitionProperty = "all"
+            fundoTres.style.transitionDelay = "800ms"
+
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
 </body>
+
 </html>
