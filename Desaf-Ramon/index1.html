@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA TENTATIVA</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+       
+
+        .box-pai{
+
+            width: calc(100% - 22px);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0px 10px;
+            gap: 10px;
+           flex-wrap: wrap;
+           
+           
+            
+            
+            
+            
+        }
+
+        .pai1, .pai2, .pai3{
+
+            position: relative;
+            
+
+
+        }
+
+       
+        
+        .filho1 , .filho2, .filho3 , .fundo1 , .fundo2 , .fundo3{
+        
+            width: 300px;
+            height: 200px;
+            border-radius: 10px 10px 0px 0px;
+
+        }
+           
+            
+        .filho1 , .filho2, .filho3 {
+
+            background-color: red;
+            position: absolute;
+            
+            
+        }
+            
+           
+        .filho1{
+
+            background-image: url(image/21105542136038.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+        .filho2{
+
+            background-image: url(image/i533291.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .filho3{
+
+            background-image: url(image/i558851.jpeg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+
+
+        .fundo1 , .fundo2 , .fundo3{
+
+            background-color: blue;
+        }
+
+     
+    </style>
+</head>
+<body>
+
+
+    <main>
+
+
+        <div class="box-pai">
+
+            <section class="pai1">
+                <div id="frente1" class="filho1"></div>
+                <div class="fundo1" id="fundo1"></div>
+            </section>
+
+            <section class="pai2">
+                <div class="filho2"></div>
+                <div class="fundo2"></div>
+            </section>
+
+            
+            <section class="pai3">
+                <div class="filho3"></div>
+                <div class="fundo3"></div>
+            </section>
+            
+
+
+
+        </div>
+
+
+    </main>
+
+<script>
+
+    let frenteUm = document.getElementById('frente1')
+    let fundoUm = document.getElementById('fundo1')
+
+
+    frenteUm.addEventListener('mouseover', mover)
+
+    fundoUm.addEventListener('mouseout' , voltar)
+
+    function mover(){
+
+        frenteUm.style.transitionProperty="all"
+        frenteUm.style.transitionDuration="1s"
+        frenteUm.style.transform="translateY(-200px)"
+
+       
+        
+        fundoUm.style.borderRadius="0px 0px 0px 0px"
+        fundoUm.style.transitionProperty="all"
+        fundoUm.style.transitionDelay="800ms"
+        
+
+    }
+
+
+    
+
+    function voltar(){
+
+        frenteUm.style.transitionProperty="all"
+        frenteUm.style.transitionDuration="1s"
+        frenteUm.style.transform="translateY(0px)" 
+
+       
+
+        fundoUm.style.borderRadius="10px 10px 0px 0px"
+        fundoUm.style.transitionProperty="all"
+        fundoUm.style.transitionDelay="800ms"
+
+    }
+
+
+   
+    
+
+
+</script>
+</body>
+</html>
