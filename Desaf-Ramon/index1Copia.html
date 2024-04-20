@@ -58,6 +58,7 @@
             width: 300px;
             height: 200px;
             border-radius: 10px 10px 0px 0px;
+            cursor: pointer;
 
         }
 
@@ -68,6 +69,7 @@
 
             background-color: red;
             position: absolute;
+            
 
 
         }
@@ -189,8 +191,16 @@
 
             }
 
+
         }
 
+
+        .move{
+
+            transition: all 1s;
+            transform: translateY(-200px);
+
+        }
 
 
     </style>
@@ -220,10 +230,11 @@
                 <div id="fundo3" class="fundo3"></div>
             </section>
 
-
-
-
         </div>
+
+
+
+
 
 
     </main>
@@ -238,159 +249,59 @@
         let fundoDois = document.getElementById('fundo2')
         let fundoTres = document.getElementById('fundo3')
 
+       
 
 
-        frenteUm.addEventListener('mouseover', moverface)
-        fundoUm.addEventListener('mouseout', voltarface)
-
-        frenteDois.addEventListener('mouseover', moveryt)
-        fundoDois.addEventListener('mouseout', voltaryt)
-
-        frenteTres.addEventListener('mouseover', moverinsta)
-        fundoTres.addEventListener('mouseout', voltarinsta)
-
+        
 
         window.addEventListener('resize' , size)
 
+        frenteUm.addEventListener('click' , movimentarFace)
+        fundoUm.addEventListener('click' , voltarFace)
+       
+        
 
 
-        function moverface() {
+        function movimentarFace(){
 
 
+            frenteUm.style.transform="translateY(-200px)"
+            frenteUm.style.transitionDuration="1s"
 
-            frenteUm.style.transitionProperty = "all"
-            frenteUm.style.transitionDuration = "1s"
-            frenteUm.style.transform = "translateY(-200px)"
-
-
-
-            fundoUm.style.borderRadius = "0px 0px 0px 0px"
-            fundoUm.style.transitionProperty = "all"
-            fundoUm.style.transitionDelay = "800ms"
-
-
-
+        
 
         }
 
+        function voltarFace(){
 
-        function moverLadoFace(){
-
-            frenteUm.style.transitionProperty = "all"
-            frenteUm.style.transitionDuration = "1s"
-            frenteUm.style.transform = "translateX(-200px)"
-
-
-
-            fundoUm.style.borderRadius = "0px 0px 0px 0px"
-            fundoUm.style.transitionProperty = "all"
-            fundoUm.style.transitionDelay = "800ms"
-
+            frenteUm.style.transform="translateY(0px)"
+            frenteUm.style.transitionDuration="1s"
 
         }
 
+        
+        function sairFoco(){
 
 
-
-
-
-
-
-
-        function voltarface() {
-
-            frenteUm.style.transitionProperty = "all"
-            frenteUm.style.transitionDuration = "1s"
-            frenteUm.style.transform = "translateY(0px)"
-
-
-
-            fundoUm.style.borderRadius = "10px 10px 0px 0px"
-            fundoUm.style.transitionProperty = "all"
-            fundoUm.style.transitionDelay = "800ms"
+            frenteUm.style.transform="translateY(0px)"
+            face.style.width="100%"
+            frenteUm.style.transitionDuration="1s"
 
         }
+            
 
-
-
-        function moveryt() {
-
-            frenteDois.style.transitionProperty = "all"
-            frenteDois.style.transitionDuration = "1s"
-            frenteDois.style.transform = "translateY(-200px)"
-
-
-
-            fundoDois.style.borderRadius = "0px 0px 0px 0px"
-            fundoDois.style.transitionProperty = "all"
-            fundoDois.style.transitionDelay = "800ms"
-
-
-
-
-        }
-
-
-
-        function voltaryt() {
-
-            frenteDois.style.transitionProperty = "all"
-            frenteDois.style.transitionDuration = "1s"
-            frenteDois.style.transform = "translateY(0px)"
-
-
-
-            fundoDois.style.borderRadius = "10px 10px 0px 0px"
-            fundoDois.style.transitionProperty = "all"
-            fundoDois.style.transitionDelay = "800ms"
-
-        }
-
-
-        function moverinsta() {
-
-            frenteTres.style.transitionProperty = "all"
-            frenteTres.style.transitionDuration = "1s"
-            frenteTres.style.transform = "translateY(-200px)"
-
-
-
-            fundoTres.style.borderRadius = "0px 0px 0px 0px"
-            fundoTres.style.transitionProperty = "all"
-            fundoTres.style.transitionDelay = "800ms"
-
-
-
-
-        }
-
-
-
-        function voltarinsta() {
-
-            frenteTres.style.transitionProperty = "all"
-            frenteTres.style.transitionDuration = "1s"
-            frenteTres.style.transform = "translateY(0px)"
-
-
-
-            fundoTres.style.borderRadius = "10px 10px 0px 0px"
-            fundoTres.style.transitionProperty = "all"
-            fundoTres.style.transitionDelay = "800ms"
-
-        }
 
 
         function size(){
 
             if(window.innerWidth <= 659){
 
-                frenteUm.onmouseover = moverLadoFace
-                
+               
+
 
             }else {
 
-                frenteUm.onmouseover = moverface
+                
                 
             }
 
