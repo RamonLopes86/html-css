@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+           
         }
 
 
@@ -25,8 +26,28 @@
             justify-content: center;
             height: 100vh;
             gap: 30px;
+            
+            width: fit-content;
+            height: fit-content;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
 
 
+        }
+
+        
+
+
+        body{
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100vh;
         }
 
 
@@ -42,12 +63,6 @@
         }
 
 
-
-
-
-
-
-
         .filho1,
         .filho2,
         .filho3,
@@ -59,7 +74,7 @@
             height: 200px;
             border-radius: 10px 10px 0px 0px;
             cursor: pointer;
-
+            
         }
 
 
@@ -121,14 +136,14 @@
 
         main > .box-pai section{
 
-            filter: blur(5px);
+            opacity: 0.5;;
             transition: all 500ms;
            
         }
 
         main > .box-pai > section:hover{
 
-            filter: blur(0px);
+            opacity: 1;;
             transition: all 500ms;
             transform:scale(1.1);
             
@@ -202,6 +217,7 @@
 
         }
 
+       
 
     </style>
 </head>
@@ -241,6 +257,7 @@
 
     <script>
 
+       
         let frenteUm = document.getElementById('frente1')
         let frenteDois = document.getElementById('frente2')
         let frenteTres = document.getElementById('frente3')
@@ -254,23 +271,16 @@
 
         
 
-        window.addEventListener('resize' , size)
-
-        frenteUm.addEventListener('click' , movimentarFace)
-        fundoUm.addEventListener('click' , voltarFace)
        
+
+        
+        fundoUm.addEventListener('click' , voltarFace)
+        frenteUm.addEventListener('click' , irVir)
+        window.addEventListener('resize' , size)
         
 
 
-        function movimentarFace(){
-
-
-            frenteUm.style.transform="translateY(-200px)"
-            frenteUm.style.transitionDuration="1s"
-
-        
-
-        }
+      
 
         function voltarFace(){
 
@@ -280,28 +290,54 @@
         }
 
         
-        function sairFoco(){
 
+        let posIni = 0 
 
-            frenteUm.style.transform="translateY(0px)"
-            face.style.width="100%"
-            frenteUm.style.transitionDuration="1s"
+        function irVir(){
+
+           
+
+            if(posIni === 0){
+
+                posIni = 200
+
+                frenteUm.style.transform=` translateY(-${posIni}px) `
+                frenteUm.style.transitionDuration="1s"
+                
+            }else {
+
+                posIni = 0
+                frenteUm.style.transform=` translateY(${posIni}px)` 
+            }
+            
+            
 
         }
             
 
+       function eixoX(){
 
+            frenteUm.style.transform="translate(-200px)"
+            frenteUm.style.transitionDuration="1s"
+
+       }
+
+       function exixoXback(){
+
+            frenteUm.style.transform="translate(0px)"
+            frenteUm.style.transitionDuration="1s"
+
+       }
 
         function size(){
 
             if(window.innerWidth <= 659){
 
-               
-
+                    frenteUm.onclick = eixoX
 
             }else {
 
-                
+                frenteUm.onclick = irVir
                 
             }
 
