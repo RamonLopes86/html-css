@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANDALORIAN</title>
+    <link rel="stylesheet" href="estilo/style.css" media="screen">
+    <link rel="stylesheet" href="estilo/moblie.css">
+</head>
+<body>
+    
+  
+    <main>
+
+
+        <section class="bg">
+
+            <section class="menu-nav">
+                <div class="pai-nav">
+                    <div>
+                        <h2>THE MANDALORIAN</h2>
+                    </div>
+                    <div class="hamburger">
+                        <input type="checkbox" name="check" id="idcheck" >
+                        <label for="idcheck">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="menu-oculto" id="menu-oculto">
+                    <nav>
+                       <ul>
+                        <li><a href="#">A SERIE</a></li>
+                        <li><a href="#">VIDEOS</a></li>
+                        <li><a href="#">ONDE ASSISTIR</a></li>
+                        <li id="rede-social"><a href="#">REDES SOCIAIS</a></li>
+                       </ul>
+                    </nav>
+                </div>
+            </section>
+
+           
+        </section>
+    </main>
+    
+
+<script>
+
+    let menuOculto = document.getElementById('menu-oculto')
+
+    let check = document.getElementById('idcheck')
+
+    let label = document.getElementsByTagName('label')[0]
+    
+    label.addEventListener("click" , teste)
+    
+
+    function teste(){
+
+
+        if(check.checked){
+
+            menuOculto.style.display="none"
+
+        }else {
+
+            menuOculto.style.display="block"
+
+        }
+
+    }
+   
+
+        
+
+
+    
+
+</script>    
+</body>
+</html>

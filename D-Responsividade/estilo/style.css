@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+
+/* a serie videos onde assistir redes sociais */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--roboto);
+    list-style: none;
+    
+    
+}
+
+a{
+
+    text-decoration: none;
+    color: white;
+}
+    
+
+
+:root{
+
+    --roboto: 'Roboto Condensed';
+    --corpadrao: #131C2B;
+}
+
+.bg{
+
+    background-image: url(../image/Mandalorian.jpg);
+    height: 100vh;
+    background-position:  center center;
+    background-size: cover;
+}
+
+
+.menu-nav{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.116);
+    padding: 10px 20px;
+    
+    border-radius: 0px 0px 8px 8px;
+    margin: 0px 5px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    
+    
+}
+
+.menu-nav  h2 {
+
+    text-shadow: 3px 5px 3px rgba(0, 0, 0, 0.603);
+}
+    
+    
+.menu-nav .pai-nav {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.menu-nav input {
+
+    display: none;
+}
+
+.menu-nav .hamburger  , label {
+
+    cursor: pointer;
+}
+
+
+.menu-nav span {
+
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    margin: 5px;
+   
+}
+    
+
+.menu-nav .menu-oculto{
+
+    text-align: center;
+    padding: 10px 0px;
+    width: 100%;
+    display: none;
+}
+    
+    
+    
+    
+    
+
+.menu-nav .menu-oculto nav ul li  {
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.26);
+    padding: 12px 0px;
+}
+
+
+#rede-social{
+
+    border-bottom:none;
+    margin-bottom: -15px;
+}
+
+
+
+
+
+
+
+    
+    
+    
+
+
