@@ -15,20 +15,30 @@
 
         <section class="bg">
 
-            <section class="menu-nav">
+            <section class="menu-nav" id="nav">
                 <div class="pai-nav">
                     <div>
                         <h2>THE MANDALORIAN</h2>
                     </div>
                     <div class="hamburger">
-                        <input type="checkbox" name="check" id="idcheck" >
+                        <input type="checkbox" name="check" id="idcheck"  >
                         <label for="idcheck">
                             <span></span>
                             <span></span>
                             <span></span>
                         </label>
                     </div>
+
+                    <div class="geral">
+                        <p>A SERIE</p>
+                        <P>VIDEOS</P>
+                        <P>ONDE ASSISTIR</P>
+                        <P>REDES SOCIAIS</P>
+
+                    </div>
                 </div>
+
+                
 
                 <div class="menu-oculto" id="menu-oculto">
                     <nav>
@@ -42,6 +52,8 @@
                 </div>
             </section>
 
+          
+
            
         </section>
     </main>
@@ -54,29 +66,48 @@
     let check = document.getElementById('idcheck')
 
     let label = document.getElementsByTagName('label')[0]
+
+    let nav = document.getElementById('nav')
+    
     
     label.addEventListener("click" , teste)
     
+   
 
     function teste(){
 
 
         if(check.checked){
 
+            nav.style.transitionProperty="all"
+            nav.style.transitionDuration="500ms"
+            nav.style.height="54px"
             menuOculto.style.display="none"
+          
+            
 
         }else {
 
             menuOculto.style.display="block"
-
+            
+            nav.style.height="250px"
+            nav.style.transitionProperty="all"
+            nav.style.transitionDuration="500ms"
+            menuOculto.style.transitionProperty="all"
+            
+            
         }
+            
+        
+
+        
+            
 
     }
    
 
-        
-
-
+   
+    
     
 
 </script>    

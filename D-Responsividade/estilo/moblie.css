@@ -1,1 +1,33 @@
 @charset "UTF-8";
+
+
+.geral {
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.geral p:hover {
+
+    text-decoration: 2px solid white underline;
+    
+}
+
+
+
+@media  screen and (max-width:802px) {
+
+    .menu-nav .hamburger  , label{
+
+        display: block;
+    }
+
+    .geral {
+
+        display: none;
+    }
+    
+}
+   
+    

@@ -34,7 +34,7 @@ a{
 
     background-image: url(../image/Mandalorian.jpg);
     height: 100vh;
-    background-position:  center center;
+    background-position:center ;
     background-size: cover;
 }
 
@@ -79,6 +79,7 @@ a{
 .menu-nav .hamburger  , label {
 
     cursor: pointer;
+    display: none;
 }
 
 
@@ -89,6 +90,7 @@ a{
     background-color: white;
     display: block;
     margin: 5px;
+  
    
 }
     
@@ -99,17 +101,21 @@ a{
     padding: 10px 0px;
     width: 100%;
     display: none;
+    
 }
     
     
     
     
     
+  
+    
 
 .menu-nav .menu-oculto nav ul li  {
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.26);
     padding: 12px 0px;
+    cursor: pointer;
 }
 
 
@@ -117,6 +123,14 @@ a{
 
     border-bottom:none;
     margin-bottom: -15px;
+}
+
+
+.menu-nav .menu-oculto nav ul li:hover{
+
+    background-color: rgba(128, 128, 128, 0.322);
+   
+    
 }
 
 
