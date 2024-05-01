@@ -3,11 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+    
+        :root{
+
+            --poppins:"Poppins"
+
+        }
+        
+
+        .nav-bar{
+
+            background-color:#253A44;
+            height: 100vh;
+            font-family:var(--poppins)
+            
+        }
+
+        .conteudo{
+
+            background-color: darkblue;
+            height: 100vh;
+        }
+
+        .pai-grid{
+
+            display: grid;
+            grid-template-columns: 250px auto;
+            
+
+        }
+
+        .corpo{
+
+           
+
+            max-width: 1000px;
+            margin: 0px auto;
+            padding: 0px 10px;
+            
+
+        }
+
+        #img-robo{
+
+            width: 100%;
+        }
+
+        .box-img{
+
+            border-radius: 50%;
+            padding: 10px;
+
+        }
+            
+
+       
+
+        .nav-bar nav ul {
+
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin: 10px 10px;
+            align-items: center;
+        }
+
+
+            
+            
+
+        .nav-bar nav ul li {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 3px;
+            width: 100%;
+            padding: 5px;
+            color: white;
+        }
+
+        .nav-bar nav ul li:hover{
+
+            background-color: white;
+            border-radius: 20px;
+            transition: background-color 300ms;
+            cursor: pointer;
+            color: black;
+            
+        }
+
+        span{
+
+            position: relative;
+            bottom: 3px;
+        }
+
+    
+        @media screen and (max-width:1440px){
+
+
+             .pai-grid{
+
+                grid-template-columns: 54px auto;
+                transition: all 300ms;
+
+             }
+
+             span{
+
+                display: none;
+                background-color: none;
+             }
+
+             .nav-bar nav ul li:hover{
+
+                background-color:transparent;
+             }
+
+             .nav-bar nav ul li{
+
+                position: relative;
+                right: 15px;
+                margin-bottom: -15px;
+                padding: 11px;
+             }
+
+             .nav-bar nav ul li .box-img img {
+
+                position: relative;
+                top: 2px;
+                
+             }
+
+             .nav-bar nav ul li .box-img:hover{
+
+                background-color: rgb(228, 228, 228);
+                transition: background-color 200ms;
+                cursor: pointer;
+                
+                
+            }   
+                
+                
+            .nav-bar nav ul{
+
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                
+            }
+
+           
+
+
+        }
+        
+
+    </style>
 </head>
 <body>
    
-        
+        <header>
+
+        </header>
+        <main>
+            <section class="pai-grid">
+
+                <div class="nav-bar">
+                    <nav>
+                        <ul>
+                            <li>
+                                <div class="box-img">
+                                    <img src="imagenavbar/dashboard_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                                </div>
+                                    <span>Dashboard</span>
+                                </li>
+                            <li>
+                                <div class="box-img">
+                                    <img src="imagenavbar/directions_run_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                                </div>
+                                <span>Comece aqui</span>
+                                </li>
+                            <li>
+                                <div class="box-img"><img src="imagenavbar/diversity_3_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                                </div>
+                                <span>Temporada</span></li>
+                            <li>
+                                <div class="box-img"><img src="imagenavbar/flutter_dash_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                                </div>
+                                <span>Comunidade</span></li>
+                            <li>
+                                <div class="box-img"><img src="imagenavbar/sensor_occupied_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                                </div>
+                                <span>tecnologia</span>
+                            </li>
+                            <li>
+                                <div class="box-img"><img src="imagenavbar/settings_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                                </div>
+                                <span>Suporte ao aluno</span></li>
+                            
+                        </ul>
+                    </nav>
+                </div>
+                <div class="conteudo">
+                    <section class="corpo">
+                        <img id="img-robo" src="image/NOVO.jpeg" alt="">
+                    </section>
+                </div>
+
+            </section>
+        </main>
 
 </body>
 </html>
