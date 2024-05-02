@@ -21,13 +21,42 @@
         }
         
 
+        header{
+
+            text-align: center;
+            background-color: #253A44;
+            font-size: 0.7rem;
+            padding: 5px;
+            position: relative;
+            height: 40px;
+            display: none;
+            
+            
+        }
+
+
+
+      
+
+
+        header img {
+
+            width: 30px;
+            position: absolute;
+            left: 13px;
+            cursor: pointer;
+            
+        }
+
         .nav-bar{
 
             background-color:#253A44;
             height: 100vh;
-            font-family:var(--poppins)
+            font-family:var(--poppins);
             
         }
+            
+            
 
         .conteudo{
 
@@ -110,6 +139,15 @@
             bottom: 3px;
         }
 
+
+        .teste{
+
+            position: absolute;
+            left: 8px;
+            text-align: center;
+            display: none;
+        }
+
     
         @media screen and (max-width:1440px){
 
@@ -145,6 +183,7 @@
                 position: relative;
                 top: 2px;
                 
+                
              }
 
              .nav-bar nav ul li .box-img:hover{
@@ -152,6 +191,7 @@
                 background-color: rgb(228, 228, 228);
                 transition: background-color 200ms;
                 cursor: pointer;
+                
                 
                 
             }   
@@ -169,6 +209,29 @@
 
 
         }
+
+
+        @media screen and (max-width:710px) {
+
+                .pai-grid{
+
+                    grid-template-columns: 0px auto;
+                }
+
+            
+                .nav-bar nav {
+
+                    display: none;
+                }
+
+                
+            header{
+
+                background-color: #253A44;
+                display: block;
+            }    
+
+        }
         
 
     </style>
@@ -177,12 +240,22 @@
    
         <header>
 
+            <img id="botao" src="imagenavbar/hamburger.png" alt="icone hamburger">
         </header>
-        <main>
-            <section class="pai-grid">
 
+            
+            
+        <main>
+
+            
+            <section class="pai-grid" id="pai-grid">
+
+                
                 <div class="nav-bar">
-                    <nav>
+
+                   
+                    
+                    <nav id="nav">
                         <ul>
                             <li>
                                 <div class="box-img">
@@ -226,5 +299,34 @@
             </section>
         </main>
 
+
+<script>
+    let botao = document.getElementById('botao')
+    let grid = document.getElementById('pai-grid')
+    let nav = document.getElementById('nav')
+
+
+    botao.addEventListener("click" , menu)
+
+    let mostrar = true
+
+    function menu(){
+
+        if( mostrar == true ){
+
+            grid.style.gridTemplateColumns="54px auto"
+            nav.style.display="block"
+            mostrar = false
+        }else{
+
+            grid.style.gridTemplateColumns="0px auto"
+            nav.style.display="none"
+            mostrar= true
+        }
+       
+
+    }
+
+</script>
 </body>
 </html>
