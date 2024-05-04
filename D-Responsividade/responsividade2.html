@@ -60,7 +60,7 @@
 
         .conteudo{
 
-            background-color: darkblue;
+            background-color: darkgray;
             height: 100vh;
         }
 
@@ -74,14 +74,16 @@
 
         .corpo{
 
-           
-
-            max-width: 1000px;
+        
+            /* max-width: 1000px;
             margin: 0px auto;
-            padding: 0px 10px;
-            
+            padding: 0px 10px; */
 
+            width: 100%;
+            
+            
         }
+
 
         #img-robo{
 
@@ -90,9 +92,10 @@
 
         .box-img{
 
+            
             border-radius: 50%;
             padding: 10px;
-
+            
         }
             
 
@@ -125,7 +128,7 @@
 
         .nav-bar nav ul li:hover{
 
-            background-color: white;
+            background-color: rgb(255, 255, 255);
             border-radius: 20px;
             transition: background-color 300ms;
             cursor: pointer;
@@ -148,95 +151,123 @@
             display: none;
         }
 
-    
-        @media screen and (max-width:1440px){
+        #botao:hover{
 
-
-             .pai-grid{
-
-                grid-template-columns: 54px auto;
-                transition: all 300ms;
-
-             }
-
-             span{
-
-                display: none;
-                background-color: none;
-             }
-
-             .nav-bar nav ul li:hover{
-
-                background-color:transparent;
-             }
-
-             .nav-bar nav ul li{
-
-                position: relative;
-                right: 15px;
-                margin-bottom: -15px;
-                padding: 11px;
-             }
-
-             .nav-bar nav ul li .box-img img {
-
-                position: relative;
-                top: 2px;
-                
-                
-             }
-
-             .nav-bar nav ul li .box-img:hover{
-
-                background-color: rgb(228, 228, 228);
-                transition: background-color 200ms;
-                cursor: pointer;
-                
-                
-                
-            }   
-                
-                
-            .nav-bar nav ul{
-
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-                
-            }
-
-           
-
-
+            transform: scale(1.2);
+            transition: all 250ms;
         }
 
+        
+        .cabeca{
 
-        @media screen and (max-width:710px) {
+            background-color:bisque ;
+            padding: 10px;
+            text-align: center;
+        }
 
-                .pai-grid{
+        .info{
 
-                    grid-template-columns: 0px auto;
-                }
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            max-width:1000px;
+            padding: 10px 10px;
+            margin: 0px auto;
+            
+            background-color: white;
 
             
-                .nav-bar nav {
+            
+            
+        }
 
-                    display: none;
-                }
+       .paragrafo{
 
-                
-            header{
+            width: 50%;
+            line-height: 30px;
 
-                background-color: #253A44;
-                display: block;
-            }    
+       }
+
+        .img-dmais{
+
+           width: 50%;
+           text-align: center;
 
         }
+
+        #disney{
+
+            width: 90%;
+        }
+
+
+
+        @media screen and (max-width: 1000px) {
+
+            .nav-bar nav ul li{
+
+                    position: relative;
+                    right: 10px;
+                    
+                    
+
+                }
+
+
+                .nav-bar nav ul li:hover{
+
+                    background-color: transparent;
+                }
+
+                .box-img:hover{
+
+                    background-color: white;
+                    border-radius: 40%;
+                    transition: all 250ms;
+                    
+                }
+
+                    
+            }
+
+
+            @media screen and (max-width:700px){
+
+                .nav-bar nav ul li:hover{
+
+                    background-color: white;
+                }
+
+                .box-img:hover{
+
+                    background-color: transparent;
+                }
+
+                .nav-bar nav ul{
+
+                    padding: 0px 10px;
+                }
+
+                .info{
+
+                    flex-direction: column;
+                }
+
+                .paragrafo{
+
+                    text-align: justify;
+                    line-height: 30px;
+                }
+                
+            }
+                
+                 
         
 
     </style>
 </head>
-<body>
+<body onresize="responsividade()" onload="responsividade()">
    
         <header>
 
@@ -251,7 +282,7 @@
             <section class="pai-grid" id="pai-grid">
 
                 
-                <div class="nav-bar">
+                <div class="nav-bar" id="nav-bar">
 
                    
                     
@@ -259,24 +290,28 @@
                         <ul>
                             <li>
                                 <div class="box-img">
-                                    <img src="imagenavbar/dashboard_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                                    <img  src="imagenavbar/dashboard_FILL0_wght400_GRAD0_opsz24.png" alt="">
                                 </div>
                                     <span>Dashboard</span>
-                                </li>
+                            </li>
+
                             <li>
                                 <div class="box-img">
                                     <img src="imagenavbar/directions_run_FILL0_wght400_GRAD0_opsz24.png" alt="">
                                 </div>
                                 <span>Comece aqui</span>
-                                </li>
+                            </li>
+
                             <li>
                                 <div class="box-img"><img src="imagenavbar/diversity_3_FILL0_wght400_GRAD0_opsz24.png" alt="">
                                 </div>
-                                <span>Temporada</span></li>
+                                <span>Temporada</span>
+                            </li>
                             <li>
                                 <div class="box-img"><img src="imagenavbar/flutter_dash_FILL0_wght400_GRAD0_opsz24.png" alt="">
                                 </div>
-                                <span>Comunidade</span></li>
+                                <span>Comunidade</span>
+                            </li>
                             <li>
                                 <div class="box-img"><img src="imagenavbar/sensor_occupied_FILL0_wght400_GRAD0_opsz24.png" alt="">
                                 </div>
@@ -285,14 +320,28 @@
                             <li>
                                 <div class="box-img"><img src="imagenavbar/settings_FILL0_wght400_GRAD0_opsz24.png" alt="">
                                 </div>
-                                <span>Suporte ao aluno</span></li>
+                                <span>Suporte ao aluno</span>
+                            </li>
                             
                         </ul>
                     </nav>
                 </div>
                 <div class="conteudo">
                     <section class="corpo">
-                        <img id="img-robo" src="image/NOVO.jpeg" alt="">
+                        <div class="cabeca">
+                            <h1>MENU LATERAL</h1>
+                        </div>
+                        <div class="info">
+
+                            <div class="paragrafo">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore odio est harum sit delectus, pariatur debitis neque ab atque doloribus fugiat non ea officiis repudiandae, aut, unde facilis dolorum consequuntur?</p>
+                            </div>
+
+                            <div class="img-dmais">
+                                <img id="disney" src="image/disney+.jpeg" alt="imagem logo disney">
+                            </div>
+
+                        </div>
                     </section>
                 </div>
 
@@ -304,28 +353,141 @@
     let botao = document.getElementById('botao')
     let grid = document.getElementById('pai-grid')
     let nav = document.getElementById('nav')
+    let span0 = document.getElementsByTagName('span')[0]
+    let span1 = document.getElementsByTagName('span')[1]
+    let span2 = document.getElementsByTagName('span')[2]
+    let span3 = document.getElementsByTagName('span')[3]
+    let span4 = document.getElementsByTagName('span')[4]
+    let span5 = document.getElementsByTagName('span')[5]
+    let li = document.getElementsByTagName('li')[0]
+    let navbar = document.getElementById('nav-bar')
+    let boximg = document.querySelectorAll('.box-img')
+    let header = document.getElementsByTagName('header')[0]
+    
+    botao.addEventListener('click' , hamburger)
+
+    function responsividade(){
+
+        if(window.innerWidth >= 1001){
 
 
-    botao.addEventListener("click" , menu)
+            grid.style.gridTemplateColumns="254px auto"
+            span0.style.display="block"
+            span1.style.display="block"
+            span2.style.display="block"
+            span3.style.display="block"
+            span4.style.display="block"
+            span5.style.display="block"
+            boximg[0].style.display="block"
+            boximg[1].style.display="block"
+            boximg[2].style.display="block"
+            boximg[3].style.display="block"
+            boximg[4].style.display="block"
+            boximg[5].style.display="block"
+            header.style.display="none"
+           
+           
 
-    let mostrar = true
-
-    function menu(){
-
-        if( mostrar == true ){
+        }else if(  window.innerWidth >=701 && window.innerWidth <=1000 ){
 
             grid.style.gridTemplateColumns="54px auto"
-            nav.style.display="block"
-            mostrar = false
-        }else{
+            span0.style.display="none"
+            span1.style.display="none"
+            span2.style.display="none"
+            span3.style.display="none"
+            span4.style.display="none"
+            span5.style.display="none"
+            boximg[0].style.display="block"
+            boximg[1].style.display="block"
+            boximg[2].style.display="block"
+            boximg[3].style.display="block"
+            boximg[4].style.display="block"
+            boximg[5].style.display="block"
+            header.style.display="none"
+            
+        }else if(window.innerWidth <= 700 ){
 
             grid.style.gridTemplateColumns="0px auto"
-            nav.style.display="none"
-            mostrar= true
+            boximg[0].style.display="none"
+            boximg[1].style.display="none"
+            boximg[2].style.display="none"
+            boximg[3].style.display="none"
+            boximg[4].style.display="none"
+            boximg[5].style.display="none"
+            span0.style.display="none"
+            span1.style.display="none"
+            span2.style.display="none"
+            span3.style.display="none"
+            span4.style.display="none"
+            span5.style.display="none"
+            header.style.display="block"
+            
+            
         }
-       
+           
+            
 
     }
+
+
+    let mudar = true 
+
+    function hamburger(){
+
+        
+
+        if(mudar == true){
+
+        grid.style.gridTemplateColumns="254px auto"
+        grid.style.transition="all 500ms"
+        span0.style.display="block"
+        span1.style.display="block"
+        span2.style.display="block"
+        span3.style.display="block"
+        span4.style.display="block"
+        span5.style.display="block"
+        boximg[0].style.display="block"
+        boximg[1].style.display="block"
+        boximg[2].style.display="block"
+        boximg[3].style.display="block"
+        boximg[4].style.display="block"
+        boximg[5].style.display="block" 
+        
+
+        mudar = false
+
+    }else{
+
+        grid.style.gridTemplateColumns="0px auto"
+        grid.style.transition="all 500ms" 
+        grid.style.transition="all 500ms"
+        span0.style.display="none"
+        span1.style.display="none"
+        span2.style.display="none"
+        span3.style.display="none"
+        span4.style.display="none"
+        span5.style.display="none"
+        boximg[0].style.display="none"
+        boximg[1].style.display="none"
+        boximg[2].style.display="none"
+        boximg[3].style.display="none"
+        boximg[4].style.display="none"
+        boximg[5].style.display="none" 
+
+        mudar = true
+
+
+    }
+       
+
+
+    }
+
+
+
+    
+
+    
 
 </script>
 </body>
