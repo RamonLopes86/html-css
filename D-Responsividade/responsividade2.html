@@ -123,7 +123,7 @@
             gap: 3px;
             width: 100%;
             padding: 5px;
-            color: white;
+            color: rgb(255, 255, 255);
         }
 
         .nav-bar nav ul li:hover{
@@ -158,70 +158,10 @@
         }
 
         
-        .cabeca{
+      
 
-            background-color:bisque ;
-            padding: 10px 20px;
-            text-align: center;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-
-        }
-
-        .cabeca .menu-cabeca li {
-
-            list-style: none;
-        }
-
-
-        .cabeca .menu-cabeca{
-
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-            
-        }
 
         
-
-        .info{
-
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-            align-items: center;
-            max-width:1000px;
-            padding: 10px 10px;
-            margin: 0px auto;
-            
-            background-color: white;
-
-            
-            
-            
-        }
-
-       .paragrafo{
-
-            width: 50%;
-            line-height: 30px;
-
-       }
-
-        .img-dmais{
-
-           width: 50%;
-           text-align: center;
-
-        }
-
-        #disney{
-
-            width: 90%;
-        }
 
 
         @media screen and (max-width:420px) {
@@ -268,9 +208,13 @@
 
             @media screen and (max-width:700px){
 
+
+                
                 .nav-bar nav ul li:hover{
 
-                    background-color: white;
+                    background-color: transparent
+                    
+                    
                 }
 
                 .box-img:hover{
@@ -280,19 +224,25 @@
 
                 .nav-bar nav ul{
 
-                    padding: 0px 10px;
+                    padding: 0px 5px;
                 }
 
-                .info{
-
-                    flex-direction: column;
+                .box-img:hover{
+                    width: 50px;
+                    padding: 10px;
+                    background-color: rgb(235, 235, 235);
+                    border-radius: 50%;
+                    transition: all 400ms;
                 }
 
-                .paragrafo{
+                .box-img img {
 
-                    text-align: justify;
-                    line-height: 30px;
+                    position: relative;
+                    left: 3px;
+                    top: 2px;
                 }
+
+             
                 
             }
                 
@@ -301,13 +251,13 @@
 
     </style>
 </head>
-<body onresize="responsividade()" onload="responsividade()">
+<body onresize="responsividade()" onload="responsividade()"  >
    
         <header>
 
-            <img id="botao" src="imagenavbar/hamburger.png" alt="icone hamburger">
+            <img  id="botao" src="imagenavbar/hamburger.png" alt="icone hamburger">
 
-            <img id="close" src="imagenavbar/close_FILL0_wght400_GRAD0_opsz24.png" alt="">
+            <img  id="close" src="imagenavbar/close_FILL0_wght400_GRAD0_opsz24.png" alt="">
         </header>
 
             
@@ -363,27 +313,7 @@
                     </nav>
                 </div>
                 <div class="conteudo">
-                    <section class="corpo">
-                        <div class="cabeca">
-                            <h1>MENU LATERAL</h1>
-                            <nav class="menu-cabeca">
-                                <li>Videos</li>
-                                <li>Sinose</li>
-                                <li>Avaliação</li>
-                            </nav>
-                        </div>
-                        <div class="info">
-
-                            <div class="paragrafo">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore odio est harum sit delectus, pariatur debitis neque ab atque doloribus fugiat non ea officiis repudiandae, aut, unde facilis dolorum consequuntur?</p>
-                            </div>
-
-                            <div class="img-dmais">
-                                <img id="disney" src="image/disney+.jpeg" alt="imagem logo disney">
-                            </div>
-
-                        </div>
-                    </section>
+                  
                 </div>
 
             </section>
@@ -405,6 +335,7 @@
     let boximg = document.querySelectorAll('.box-img')
     let header = document.getElementsByTagName('header')[0]
     let fechar = document.getElementById('close')
+    let ul = document.getElementsByTagName('ul')[0]
     
     botao.addEventListener('click' , hamburger)
     fechar.addEventListener('click' , hamburger )
@@ -415,6 +346,7 @@
 
 
             grid.style.gridTemplateColumns="254px auto"
+            grid.style.transition="all 500ms"
             span0.style.display="block"
             span1.style.display="block"
             span2.style.display="block"
@@ -428,12 +360,20 @@
             boximg[4].style.display="block"
             boximg[5].style.display="block"
             header.style.display="none"
+            botao.style.display="none"
+            fechar.style.display="none"
+            ul.style.display="flex"
+            ul.style.flexDirection="column"
+            
+            
+           
            
            
 
         }else if(  window.innerWidth >=701 && window.innerWidth <=1000 ){
 
             grid.style.gridTemplateColumns="54px auto"
+            
             span0.style.display="none"
             span1.style.display="none"
             span2.style.display="none"
@@ -447,10 +387,19 @@
             boximg[4].style.display="block"
             boximg[5].style.display="block"
             header.style.display="none"
+            botao.style.display="none"
+            fechar.style.display="none"
+            ul.style.display="flex"
+            ul.style.flexDirection="column"
+            ul.style.left="0px"
+            ul.style.bottom="0px"
+            
+        
             
         }else if(window.innerWidth <= 700 ){
 
             grid.style.gridTemplateColumns="0px auto"
+            
             boximg[0].style.display="none"
             boximg[1].style.display="none"
             boximg[2].style.display="none"
@@ -464,6 +413,8 @@
             span4.style.display="none"
             span5.style.display="none"
             header.style.display="block"
+            botao.style.display="block"
+            fechar.style.display="none"
             
             
         }
@@ -484,14 +435,21 @@
 
         if(mudar == true){
 
-        grid.style.gridTemplateColumns="254px auto"
+       
+        grid.style.gridTemplateRows="62px auto"
         grid.style.transition="all 500ms"
-        span0.style.display="block"
-        span1.style.display="block"
-        span2.style.display="block"
-        span3.style.display="block"
-        span4.style.display="block"
-        span5.style.display="block"
+        grid.style.gridTemplateColumns="auto"
+        ul.style.display="flex"
+        ul.style.flexDirection="row"
+        ul.style.position="relative"
+        ul.style.bottom="10px"
+        ul.style.left="15px"
+        span0.style.display="none"
+        span1.style.display="none"
+        span2.style.display="none"
+        span3.style.display="none"
+        span4.style.display="none"
+        span5.style.display="none"
         boximg[0].style.display="block"
         boximg[1].style.display="block"
         boximg[2].style.display="block"
@@ -501,20 +459,17 @@
         botao.style.display="none"
         fechar.style.display="block"
         
-
+        
         mudar = false
+         
+        
+        
+        
 
     }else{
 
         grid.style.gridTemplateColumns="0px auto"
         grid.style.transition="all 500ms" 
-        grid.style.transition="all 500ms"
-        span0.style.display="none"
-        span1.style.display="none"
-        span2.style.display="none"
-        span3.style.display="none"
-        span4.style.display="none"
-        span5.style.display="none"
         boximg[0].style.display="none"
         boximg[1].style.display="none"
         boximg[2].style.display="none"
@@ -523,8 +478,10 @@
         boximg[5].style.display="none" 
         botao.style.display="block"
         fechar.style.display="none"
-
+        
         mudar = true
+        
+
 
 
     }
