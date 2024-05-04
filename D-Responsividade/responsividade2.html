@@ -161,9 +161,31 @@
         .cabeca{
 
             background-color:bisque ;
-            padding: 10px;
+            padding: 10px 20px;
             text-align: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
         }
+
+        .cabeca .menu-cabeca li {
+
+            list-style: none;
+        }
+
+
+        .cabeca .menu-cabeca{
+
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            
+        }
+
+        
 
         .info{
 
@@ -201,6 +223,18 @@
             width: 90%;
         }
 
+
+        @media screen and (max-width:420px) {
+
+            .cabeca{
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+            }
+        }
 
 
         @media screen and (max-width: 1000px) {
@@ -272,6 +306,8 @@
         <header>
 
             <img id="botao" src="imagenavbar/hamburger.png" alt="icone hamburger">
+
+            <img id="close" src="imagenavbar/close_FILL0_wght400_GRAD0_opsz24.png" alt="">
         </header>
 
             
@@ -330,6 +366,11 @@
                     <section class="corpo">
                         <div class="cabeca">
                             <h1>MENU LATERAL</h1>
+                            <nav class="menu-cabeca">
+                                <li>Videos</li>
+                                <li>Sinose</li>
+                                <li>Avaliação</li>
+                            </nav>
                         </div>
                         <div class="info">
 
@@ -363,8 +404,10 @@
     let navbar = document.getElementById('nav-bar')
     let boximg = document.querySelectorAll('.box-img')
     let header = document.getElementsByTagName('header')[0]
+    let fechar = document.getElementById('close')
     
     botao.addEventListener('click' , hamburger)
+    fechar.addEventListener('click' , hamburger )
 
     function responsividade(){
 
@@ -432,6 +475,9 @@
 
     let mudar = true 
 
+    fechar.style.display="none"
+   
+
     function hamburger(){
 
         
@@ -452,6 +498,8 @@
         boximg[3].style.display="block"
         boximg[4].style.display="block"
         boximg[5].style.display="block" 
+        botao.style.display="none"
+        fechar.style.display="block"
         
 
         mudar = false
@@ -473,6 +521,8 @@
         boximg[3].style.display="none"
         boximg[4].style.display="none"
         boximg[5].style.display="none" 
+        botao.style.display="block"
+        fechar.style.display="none"
 
         mudar = true
 
