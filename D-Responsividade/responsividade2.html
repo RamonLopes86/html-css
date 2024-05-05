@@ -84,6 +84,8 @@
             
         }
 
+      
+
 
         #img-robo{
 
@@ -108,6 +110,8 @@
             gap: 5px;
             margin: 10px 10px;
             align-items: center;
+            justify-content: center;
+            
         }
 
 
@@ -161,7 +165,7 @@
       
 
 
-        
+       
 
 
         @media screen and (max-width:420px) {
@@ -179,13 +183,13 @@
 
         @media screen and (max-width: 1000px) {
 
-            .nav-bar nav ul li{
+           
 
-                    position: relative;
-                    right: 10px;
-                    
-                    
+                nav{
 
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
 
 
@@ -206,123 +210,7 @@
             }
 
 
-            @media screen and (max-width:700px) and (min-width:411px){
-                
-                nav{
-                        
-                        
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        justify-content: center;
-                        position: relative;
-                        
-                        
-                    }
-
-                
-                .nav-bar nav ul li:hover{
-
-                    background-color: transparent
-                    
-                    
-                }
-
-                .box-img:hover{
-
-                    background-color: transparent;
-                }
-
-                .nav-bar nav ul{
-
-                    padding: 0px 5px;
-                    width: calc(90% - 30px);
-                    margin: 0px 15px;
-                    
-                    position: absolute;
-                    
-                    left: 5%;
-                    
-                    
-                }
-                    
-                    
-
-                .box-img:hover{
-                    width: 50px;
-                    padding: 10px;
-                    background-color: rgb(235, 235, 235);
-                    border-radius: 50%;
-                    transition: all 400ms;
-                }
-
-                .box-img img {
-
-                    position: relative;
-                    left: 3px;
-                    top: 2px;
-                }
-
-             
-                
-            }
-                
-                 
-            @media screen and (max-width:410px) {
-
-                    .box-img{
-
-                        width: 10px;
-                    } 
-
-                    nav{
-                        
-                        
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        
-
-                        
-                    }
-                    
-                    nav ul{
-
-                        width: calc(90% - 30px);
-                        
-                        margin: 0px 15px;
-                       
-                    }
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-
-                    .box-img img{
-
-                        position: relative;
-                        left: 2px;
-
-
-                    }
-
-                   
-
-                    .box-img:hover{
-                    width: 50px;
-                    padding: 10px;
-                    background-color: rgb(235, 235, 235);
-                    border-radius: 50%;
-                    transition: all 400ms;
-                }
-                    
-                        
-
-                    
-            }
+          
 
     </style>
 </head>
@@ -419,7 +307,9 @@
 
         if(window.innerWidth >= 1001){
 
-
+            nav.style.display="flex"
+            nav.style.alignItems="flex-start"
+            nav.style.justifyContent="Flex-start"
             grid.style.gridTemplateColumns="254px auto"
             grid.style.transition="all 500ms"
             span0.style.display="block"
@@ -448,7 +338,9 @@
         }else if(  window.innerWidth >=701 && window.innerWidth <=1000 ){
 
             grid.style.gridTemplateColumns="54px auto"
-            
+            nav.style.display="flex"
+            nav.style.alignItems="center"
+            nav.style.justifyContent="center"
             span0.style.display="none"
             span1.style.display="none"
             span2.style.display="none"
@@ -474,7 +366,9 @@
         }else if(window.innerWidth <= 700 ){
 
             grid.style.gridTemplateColumns="0px auto"
-            
+            nav.style.display="flex"
+            nav.style.alignItems="center"
+            nav.style.justifyContent="center"
             boximg[0].style.display="none"
             boximg[1].style.display="none"
             boximg[2].style.display="none"
