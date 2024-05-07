@@ -36,7 +36,6 @@
 
 
 
-      
 
 
         header img {
@@ -54,6 +53,19 @@
             background-color:#253A44;
             height: 100vh;
             font-family:var(--poppins);
+            width: 100%;
+           
+            
+            
+        }
+
+        nav{
+
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
             
         }
             
@@ -186,8 +198,8 @@
 
            
 
-                nav{
-
+                main .pai-grid .nav-bar nav{
+                    width: 100%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -215,7 +227,7 @@
 
     </style>
 </head>
-<body onresize="responsividade()" onload="responsividade()"  >
+<body onresize="responsividade()" onload="responsividade()" >
    
         <header>
 
@@ -242,7 +254,7 @@
                                 <div class="box-img">
                                     <img  src="imagenavbar/dashboard_FILL0_wght400_GRAD0_opsz24.png" alt="">
                                 </div>
-                                    <span>Dashboard</span>
+                                <span>Dashboard</span>
                             </li>
 
                             <li>
@@ -301,6 +313,7 @@
     let fechar = document.getElementById('close')
     let ul = document.getElementsByTagName('ul')[0]
     
+    
     botao.addEventListener('click' , hamburger)
     fechar.addEventListener('click' , hamburger )
 
@@ -308,9 +321,10 @@
 
         if(window.innerWidth >= 1001){
 
+            nav.style.width="100%"
             nav.style.display="flex"
-            nav.style.alignItems="flex-start"
-            nav.style.justifyContent="Flex-start"
+            nav.style.alignItems="center"
+            nav.style.justifyContent="center"
             grid.style.gridTemplateColumns="254px auto"
             grid.style.transition="all 500ms"
             span0.style.display="block"
@@ -330,6 +344,8 @@
             fechar.style.display="none"
             ul.style.display="flex"
             ul.style.flexDirection="column"
+            ul.style.width="100%"
+            
             
             
            
@@ -370,6 +386,7 @@
             nav.style.display="flex"
             nav.style.alignItems="center"
             nav.style.justifyContent="center"
+            nav.style.width="100%"
             boximg[0].style.display="none"
             boximg[1].style.display="none"
             boximg[2].style.display="none"
@@ -411,9 +428,14 @@
         grid.style.gridTemplateColumns="auto"
         ul.style.display="flex"
         ul.style.flexDirection="row"
+        ul.style.alignItems="center"
+        ul.style.justifyContent="center"
         ul.style.position="relative"
         ul.style.bottom="10px"
-        
+        nav.style.width="100%"
+        nav.style.display="flex"
+        nav.style.alignItems="center"
+        nav.style.justifyContent="center"
         span0.style.display="none"
         span1.style.display="none"
         span2.style.display="none"
@@ -428,6 +450,7 @@
         boximg[5].style.display="block" 
         botao.style.display="none"
         fechar.style.display="block"
+        
         
         
         mudar = false
@@ -448,6 +471,10 @@
         boximg[5].style.display="none" 
         botao.style.display="block"
         fechar.style.display="none"
+        nav.style.width="100%"
+        nav.style.display="flex"
+        nav.style.alignItems="center"
+        nav.style.justifyContent="center"
         
         mudar = true
         
