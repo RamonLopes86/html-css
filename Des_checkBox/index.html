@@ -90,12 +90,16 @@
 
         input[type="checkbox"]:checked{
 
-            background-color: rgb(231, 146, 49);
+            background-image: url(arrow_drop_down_24dp_FILL0_wght400_GRAD0_opsz24.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            
 
             
         }
 
-        input[type="checkbox"]:checked::before{
+        /* input[type="checkbox"]:checked::before{
 
             content: '✆';
             color: white;
@@ -105,7 +109,7 @@
             bottom: 0.5px;
             
 
-        }
+        } */
 
         
 
@@ -114,7 +118,7 @@
             accent-color: red;
         } */
 
-        
+/*         
 
         input[type="radio"]{
 
@@ -132,7 +136,7 @@
 
         input[type="radio"]:checked{
 
-            background-color:gold;
+            background-color:rgba(255, 217, 0, 0.774);
             outline:none;
            
             
@@ -140,59 +144,102 @@
 
         input[type="radio"]:checked::before{
 
-            content: '✈';
-            width: 10px;
-            height: 10px;
-            display: block;
+           content: "x";
+           position: relative;
+           bottom: 2px;
+           color: red;
+
+        } */
+
+        input[type="radio"]{
+
+            appearance: none;
+            width: 13px;
+            height: 13px;
+            border:1px solid gray;
+            border-radius: 50%;
             position: relative;
-            right: 1px;
-            bottom: 3px;
-            color: white;
+            
+
         }
 
-        
+
+        input[type="radio"]:checked{
+
+            /* background-image: url(Paisagem-1.webp);
+            background-size: cover;
+            background-repeat: no-repeat; */
+
+            background-color: pink;
+            border: none;
+            
+            
+        }
+
+        input[type="radio"]:checked::before{
+
+            content: 'x';
+            position: absolute;
+            color: red;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50% , -60%);
+
+        }
+
+            
+
 
 
         /* select */
         
 
-       select{
+     
+     
+        .titulo {
 
-        appearance: none;
-        width: 100%;
-        
+            backdrop-filter: blur (10px);    
+            background-color: red;
+        }
 
-       
-        
-       }
-
-       select:focus{
-
-        
-
-        background-image: url(Paisagem-1.webp);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        color: white;
-
-       }
-
+        .titulo h1 {
+            
+            
+            color: white;
+        }
         
 
 
-        
+        header{
+
+            background-color: gray;
+            backdrop-filter: blur(50px);
+            padding: 10px 0px;
+            text-align: center;
+            min-height: 80px;
+            color: green;
+        }
+
+        header h1 {
+
+            background-color: red;
+            display: inline;
+            padding: 20px;
+
+        }
 
         
 
-           
-
-
-
-
+    
     </style>
 </head>
 <body>
+
+    <header>
+        <h1>
+            teste
+        </h1>
+    </header>
     
     <main>
             <section class="formulario">
@@ -216,12 +263,21 @@
                     </div>
 
                     <select name="" id="">
-                        
+
                         <option value="NM">Nome</option>
                         <option  value="MT">Mato Grosso</option>
+                        
                     </select>
 
                 </form>
+
+                
+            </section>
+
+            <section>
+                <div class="titulo">
+                    <h1>TESTE</h1>
+                </div>
             </section>
     </main>
 
