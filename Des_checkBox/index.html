@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox mudar cor</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+        main {
+
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .formulario{
+
+            background-color: rgba(76, 173, 37, 0.692);
+            padding: 20px;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box-check{
+
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .formulario form {
+
+            background-color: white;
+            width: 120px;
+            height: 120px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-evenly;
+        }
+
+        .box-radio{
+
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            
+        }
+
+        .sim ,  .nao {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap:5px;
+        }
+
+        label {
+
+            cursor: pointer;
+        }
+        input[type="checkbox"]{
+
+            appearance: none;
+            border: 1px solid rgba(0, 0, 0, 0.212);
+            width: 15px;
+            height: 15px;
+            border-radius: 2px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+           
+           
+        }
+
+        input[type="checkbox"]:checked{
+
+            background-color: rgb(231, 146, 49);
+
+            
+        }
+
+        input[type="checkbox"]:checked::before{
+
+            content: '✆';
+            color: white;
+            display: block;
+            position: relative;
+            left: 0.5px;
+            bottom: 0.5px;
+            
+
+        }
+
+        
+
+        /* input[type="radio"]:checked{
+
+            accent-color: red;
+        } */
+
+        
+
+        input[type="radio"]{
+
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            border: 1px solid rgba(128, 128, 128, 0.301);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+           
+           
+        }
+
+        input[type="radio"]:checked{
+
+            background-color:gold;
+            outline:none;
+           
+            
+        }
+
+        input[type="radio"]:checked::before{
+
+            content: '✈';
+            width: 10px;
+            height: 10px;
+            display: block;
+            position: relative;
+            right: 1px;
+            bottom: 3px;
+            color: white;
+        }
+
+        
+
+
+        /* select */
+        
+
+       select{
+
+        appearance: none;
+        width: 100%;
+        
+
+       
+        
+       }
+
+       select:focus{
+
+        
+
+        background-image: url(Paisagem-1.webp);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+
+       }
+
+        
+
+
+        
+
+        
+
+           
+
+
+
+
+    </style>
+</head>
+<body>
+    
+    <main>
+            <section class="formulario">
+                <form action="" method="get">
+
+                    <div class="box-check">
+                        <label for="idcheck">clique</label>
+                        <input type="checkbox" name="check" id="idcheck">
+                    </div>
+
+                    <div class="box-radio">
+                        <div class="sim">
+                            <label for="idsim">Sim</label>
+                            <input type="radio" name="simnao" id="idsim">
+                        </div>
+
+                        <div class="nao">
+                            <label for="idnao">Não</label>
+                            <input type="radio" name="simnao" id="idnao">
+                        </div>
+                    </div>
+
+                    <select name="" id="">
+                        
+                        <option value="NM">Nome</option>
+                        <option  value="MT">Mato Grosso</option>
+                    </select>
+
+                </form>
+            </section>
+    </main>
+
+
+</body>
+</html>
