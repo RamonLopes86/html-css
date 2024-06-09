@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object fit x Aspect ratio</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .card{
+
+            width: 400px;
+            border: 1px solid;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(128, 128, 128, 0.521);
+            gap: 10px;
+        }
+
+        .card h1 {
+
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            letter-spacing: 3px;
+            font-size: 1.8rem;
+            padding: 10px;
+        }
+
+        .card div {
+
+            text-align: center;
+            
+        }
+
+        .card div p{
+
+            padding: 10px;
+            font-size: 1.5rem;
+        }
+
+        
+            
+
+        .centro{
+
+            
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+
+        .centro .filho {
+
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            border: 1px solid gold;
+            margin: 10px;
+            align-items: center;
+
+        }
+
+        .filho img{
+
+            width: 50px;
+            aspect-ratio: 2 / 2;
+            object-fit: cover;
+
+        }
+
+        .filho p {
+
+            width: 100%;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="card">
+
+        <h1>INFORMAÇÕES</h1>
+
+        <div class="centro">
+            
+            
+            <div class="filho">
+                <img src="image/dentista01.png" alt="dent1">
+                <p>Dra. Maria Helena Sá Lopes</p>
+            </div>
+
+            <div class="filho">
+                <img src="image/dentista02.png" alt="dent1">
+                <p>Dra. Maria Helena Sá Lopes</p>
+            </div>
+            
+        </div>
+
+
+    </div>
+    
+</body>
+</html>
