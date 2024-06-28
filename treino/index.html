@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="p"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+
+
+    <script>
+    
+    let p = document.getElementById('p')
+    let p2 = document.getElementById('p2')
+    let p3 = document.getElementById('p3')
+
+    let array = [5,7,8,2,5]
+
+
+    // 3 formas 
+
+    // 1º Function Normal
+
+    function Mapear(array){
+
+        return(
+
+            array * 3
+        )
+    }
+
+    p.innerHTML = array.map(Mapear)
+
+
+    // 2 forma ( com arrow function )
+
+    const Triplo = (array)=>{
+
+            return(
+
+                array * 3
+            )
+    }
+
+    p2.innerHTML = array.map(Triplo)
+
+
+    // 3  forma com array na mesma linha
+
+
+    const Triplo2 = array.map((array)=> array * 2)
+
+    p3.innerHTML = Triplo2
+
+
+    </script>
+</body>
+
+</html>
