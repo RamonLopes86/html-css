@@ -17,7 +17,7 @@
         li:first-child {
             /*vai estilizar o primeiro item da lista, caso tenha uma tag no topo da lista ele nao vai estilizar o primeiro filho li*/
 
-            color: green;
+            color: rgb(0, 57, 110);
 
 
         }
@@ -37,7 +37,7 @@
         li:nth-of-type(2) {
             /*seleciona dentro dos parenteses o item filho que deseja estilizar e vai ignorar qualquer elemento que esteja no topo que nao seja filho da lista*/
 
-            color: red;
+            color: rgb(0, 255, 42);
             background-color: black;
             width: 100px;
             padding: 10px;
@@ -63,6 +63,14 @@
 
             color: yellow;
         }
+
+
+        .treino p:nth-child(2){
+
+            background-color: red;
+        
+        }
+
 
     </style>
 </head>
@@ -98,6 +106,14 @@
         <li>item4</li>
         <li>item5</li>
     </ul>
+
+   <div class="treino">
+
+        <p>teste</p>
+
+        <p>teste2</p>
+
+   </div>
 
 
 </body>
